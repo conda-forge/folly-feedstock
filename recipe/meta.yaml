@@ -1,4 +1,9 @@
 {% set version = "2021.08.02.00" %}  # PEP 386
+{% set build_ext_version = "1.0.0" %}
+{% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
+{% set number = "1" %}
+{% set build_string = "h{}_{}".format(PKG_HASH, number) %}
+{% set build_string_ext = "{}_jemalloc".format(build_string) if jemalloc_enabled else build_string  %}
 
 package:
   name: folly
@@ -9,10 +14,11 @@ source:
   sha256: 2f9b0ff1af934ca715028462985b6c22004f2599af157bab475857ffc9a5688d
 
 build:
-  number: 0
+  number: {{ number }}
   skip: true  # [not linux64]
+  string: {{ build_string_ext }}
   ignore_run_exports:
-    - jemalloc
+    - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
 
 requirements:
   build:
@@ -25,7 +31,7 @@ requirements:
     - fmt
     - gflags
     - glog
-    - jemalloc
+    - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
     - libaio
     - libevent
     - libsodium
@@ -38,7 +44,7 @@ requirements:
     - zstd
   run:
     - boost-cpp
-    - jemalloc
+    - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
 
 test:
   requires:
