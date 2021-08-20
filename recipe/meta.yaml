@@ -1,8 +1,7 @@
 {% set version = "2021.08.02.00" %}  # PEP 386
-{% set build_ext_version = "1.0.0" %}
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
-{% set number = "1" %}
-{% set build_string = "h{}_{}".format(PKG_HASH, number) %}
+### IMPORTANT: always keep the build number in build_string and in build/number equal!
+{% set build_string = "h{}_1".format(PKG_HASH) %}
 {% set build_string_ext = "{}_jemalloc".format(build_string) if jemalloc_enabled else build_string  %}
 
 package:
@@ -14,7 +13,7 @@ source:
   sha256: 2f9b0ff1af934ca715028462985b6c22004f2599af157bab475857ffc9a5688d
 
 build:
-  number: {{ number }}
+  number: 1
   skip: true  # [not linux64]
   string: {{ build_string_ext }}
   ignore_run_exports:
