@@ -39,10 +39,17 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
+              <td>linux_64_folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=master&jobName=linux&configuration=linux_64_folly_build_extNone" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_folly_build_extjemalloc</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=master&jobName=linux&configuration=linux_64_folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr>

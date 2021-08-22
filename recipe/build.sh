@@ -14,6 +14,13 @@ export CXXFLAGS="$CXXFLAGS -DFOLLY_HAVE_CLOCK_GETTIME=1"
 mkdir -p _build
 cd _build
 
+if [[ ! -z "${folly_build_ext+x}" && "${folly_build_ext}" == "jemalloc" ]]
+then
+    CMAKE_ARGS="${CMAKE_ARGS} -DENABLE_JEMALLOC=ON"
+else
+    CMAKE_ARGS="${CMAKE_ARGS} -DENABLE_JEMALLOC=OFF"
+fi
+
 cmake ${CMAKE_ARGS} -Wno-dev -GNinja -DBUILD_SHARED_LIBS=ON ..
 
 cmake --build . --parallel
