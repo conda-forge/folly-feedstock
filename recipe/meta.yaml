@@ -1,4 +1,4 @@
-{% set version = "2021.08.02.00" %}  # PEP 386
+{% set version = "2021.08.23.00" %}  # PEP 386
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 ### IMPORTANT: always keep the build number in build_string and in build/number equal!
 {% set build_string = "h{}_1".format(PKG_HASH) %}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
-  sha256: 2f9b0ff1af934ca715028462985b6c22004f2599af157bab475857ffc9a5688d
+  sha256: 9dac3893fa05a3f43f745a3105c5481b2c908f26c7ffc1f4a089fbc32dd36893
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux64]
   string: {{ build_string_ext }}
   ignore_run_exports:
@@ -59,7 +59,7 @@ about:
   home: https://github.com/facebook/folly
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Facebook Open-source Library'
+  summary: Facebook Open-source Library
   description: |
     Folly (acronymed loosely after Facebook Open Source Library) is a
     library of C++14 components designed with practicality and
