@@ -5,7 +5,7 @@ bzip2:
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -17,7 +17,7 @@ docker_image:
 fmt:
 - '8'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
