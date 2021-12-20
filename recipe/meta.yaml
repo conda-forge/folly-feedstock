@@ -1,4 +1,4 @@
-{% set version = "2021.11.29.00" %}  # PEP 386
+{% set version = "2021.12.20.00" %}  # PEP 386
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 ### IMPORTANT: always keep the build number in build_string and in build/number equal!
 {% set build_string = "h{}_1".format(PKG_HASH) %}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
-  sha256: a8d95df3fbdeb1ef4d078ee2b2883f5451a62d30526ab5571618f5d13d54406f
+  sha256: 1e780708cd23cb01b62b4db09ef02ba36f8949a8a8115d3398fd395e748a9343
 
 build:
   number: 0
