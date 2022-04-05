@@ -21,7 +21,7 @@ folly_build_ext:
 gflags:
 - '2.2'
 glog:
-- '0.5'
+- '0.6'
 libevent:
 - 2.1.10
 lz4_c:
