@@ -11,6 +11,9 @@ export CXXFLAGS="$CXXFLAGS -D__STDC_FORMAT_MACROS"
 # Resolves error No clock_gettime(3) compatibility wrapper available for this platform.
 export CXXFLAGS="$CXXFLAGS -DFOLLY_HAVE_CLOCK_GETTIME=1"
 
+# Resolves error invalid conversion from 'void (*)() noexcept' to 'google::logging_fail_func_t' {aka 'void (*)() __attribute__((noreturn))'}
+export CXXFLAGS="$CXXFLAGS -fpermissive"
+
 mkdir -p _build
 cd _build
 
