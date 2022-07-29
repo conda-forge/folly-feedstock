@@ -13,7 +13,7 @@ source:
   sha256: c49cfe7dc9b515e30338063a5fd06e7a64a107e14e66131a26df0a14976e2f03
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux64]
   string: {{ build_string_ext }}
   ignore_run_exports:
@@ -34,7 +34,8 @@ requirements:
     - libaio
     - libevent
     - libsodium
-    - snappy
+    # snappy 1.1.9 breaks linking with folly, see https://github.com/facebook/folly/issues/1606
+    - snappy 1.1.8
     - bzip2
     - lz4-c
     - openssl
@@ -44,6 +45,7 @@ requirements:
   run:
     - boost-cpp
     - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
+    - snappy 1.1.8
 
 test:
   requires:
