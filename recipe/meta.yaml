@@ -13,7 +13,7 @@ source:
   sha256: 17a3804dd9aacd8a2440b3e0235cdfc2659f880c439b9a7533555d7061702f64
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux64]
   string: {{ build_string_ext }}
   ignore_run_exports:
