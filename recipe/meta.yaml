@@ -27,7 +27,7 @@ requirements:
   host:
     - boost-cpp
     - double-conversion
-    - fmt
+    - fmt 8.0.1
     - gflags
     - glog
     - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
