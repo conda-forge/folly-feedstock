@@ -1,3 +1,5 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
 boost_cpp:
 - 1.78.0
 bzip2:
@@ -7,7 +9,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- clangxx
+cxx_compiler_version:
+- '14'
 fmt:
 - '9'
 folly_build_ext:
@@ -20,13 +24,15 @@ libevent:
 - 2.1.10
 lz4_c:
 - 1.9.3
+macos_machine:
+- arm64-apple-darwin20.0.0
 openssl:
-- '3'
+- 1.1.1
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
 target_platform:
-- win-64
+- osx-arm64
 xz:
 - '5'
 zlib:

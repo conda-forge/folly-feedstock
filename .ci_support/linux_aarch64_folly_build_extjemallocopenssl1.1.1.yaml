@@ -1,13 +1,23 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 boost_cpp:
 - 1.78.0
 bzip2:
 - '1'
+cdt_arch:
+- aarch64
+cdt_name:
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- gxx
+cxx_compiler_version:
+- '10'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
 - '9'
 folly_build_ext:
@@ -21,12 +31,12 @@ libevent:
 lz4_c:
 - 1.9.3
 openssl:
-- '3'
+- 1.1.1
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
 target_platform:
-- win-64
+- linux-aarch64
 xz:
 - '5'
 zlib:
