@@ -31,7 +31,7 @@ requirements:
     - gflags
     - glog
     - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
-    - libaio
+    - libaio  # [linux]
     - libevent
     - libsodium
     # snappy 1.1.9 breaks linking with folly, see https://github.com/facebook/folly/issues/1606
@@ -53,7 +53,7 @@ test:
   commands:
     - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}
     - test -f ${PREFIX}/include/folly/folly-config.h
-    - $CXX $CXXFLAGS -lfolly $RECIPE_DIR/arena_test.c -o arena_test
+    - $CXX $CXXFLAGS $LDFLAGS -lfolly $RECIPE_DIR/arena_test.c -o arena_test
     - test -f ./arena_test
     - ./arena_test
 
