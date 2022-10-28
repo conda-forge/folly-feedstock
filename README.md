@@ -39,6 +39,7 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
+<<<<<<< HEAD
               <td>linux_64_fmt8.0.1folly_build_extNoneopenssl1.1.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
@@ -92,6 +93,33 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt9folly_build_extjemallocopenssl3" alt="variant">
+=======
+              <td>win_64_folly_build_extNoneopenssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win_64_folly_build_extNoneopenssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_folly_build_extNoneopenssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win_64_folly_build_extNoneopenssl3" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_folly_build_extjemallocopenssl1.1.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win_64_folly_build_extjemallocopenssl1.1.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_folly_build_extjemallocopenssl3</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win_64_folly_build_extjemallocopenssl3" alt="variant">
+>>>>>>> 0a64957 (MNT: Re-rendered with conda-build 3.22.0, conda-smithy 3.21.2, and conda-forge-pinning 2022.10.28.11.26.40)
                 </a>
               </td>
             </tr>
