@@ -14,7 +14,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [not linux64]
+  skip: true  # [not win]
   string: {{ build_string_ext }}
   ignore_run_exports:
     - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
@@ -51,7 +51,7 @@ test:
   requires:
     - {{ compiler('cxx') }}
   commands:
-    - test -f ${PREFIX}/lib/libfolly.so
+    - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}
     - test -f ${PREFIX}/include/folly/folly-config.h
     - $CXX $CXXFLAGS -lfolly $RECIPE_DIR/arena_test.c -o arena_test
     - test -f ./arena_test
