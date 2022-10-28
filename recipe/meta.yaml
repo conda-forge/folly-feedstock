@@ -14,7 +14,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [not win]
+  skip: true  # [win]
   string: {{ build_string_ext }}
   ignore_run_exports:
     - jemalloc  # [folly_build_ext is not undefined and folly_build_ext == "jemalloc"]
