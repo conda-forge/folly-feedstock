@@ -372,4 +372,5 @@ Feedstock Maintainers
 =====================
 
 * [@pearu](https://github.com/pearu/)
+* [@xhochy](https://github.com/xhochy/)
 
