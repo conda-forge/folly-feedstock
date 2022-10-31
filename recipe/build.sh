@@ -34,6 +34,8 @@ fi
 
 cmake ${CMAKE_ARGS} -Wno-dev -GNinja -DBUILD_SHARED_LIBS=ON ..
 
+cat CMakeCache.txt
+
 cmake --build . --parallel
 
 cmake --install .
