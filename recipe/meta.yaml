@@ -58,7 +58,7 @@ test:
   commands:
     - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}
     - test -f ${PREFIX}/include/folly/folly-config.h
-    - $CXX $CXXFLAGS $LDFLAGS -lfolly $RECIPE_DIR/arena_test.c -o arena_test
+    - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test
     - test -f ./arena_test
     - ./arena_test
 
