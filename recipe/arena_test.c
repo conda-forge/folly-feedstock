@@ -1,4 +1,5 @@
 #include <folly/memory/Arena.h>
+#include <folly/lang/ToAscii.h>
 
 int main() {
   static const size_t requestedBlockSize = 64;
