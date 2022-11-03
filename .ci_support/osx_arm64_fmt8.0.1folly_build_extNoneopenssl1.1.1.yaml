@@ -31,6 +31,8 @@ openssl:
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
+snappy:
+- '1'
 target_platform:
 - osx-arm64
 xz:
