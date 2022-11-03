@@ -8,29 +8,53 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_folly_build_extNoneopenssl1.1.1:
-        CONFIG: osx_64_folly_build_extNoneopenssl1.1.1
+      osx_64_fmt8.0.1folly_build_extNoneopenssl1.1.1:
+        CONFIG: osx_64_fmt8.0.1folly_build_extNoneopenssl1.1.1
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extNoneopenssl3:
-        CONFIG: osx_64_folly_build_extNoneopenssl3
+      osx_64_fmt8.0.1folly_build_extNoneopenssl3:
+        CONFIG: osx_64_fmt8.0.1folly_build_extNoneopenssl3
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extjemallocopenssl1.1.1:
-        CONFIG: osx_64_folly_build_extjemallocopenssl1.1.1
+      osx_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1:
+        CONFIG: osx_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extjemallocopenssl3:
-        CONFIG: osx_64_folly_build_extjemallocopenssl3
+      osx_64_fmt8.0.1folly_build_extjemallocopenssl3:
+        CONFIG: osx_64_fmt8.0.1folly_build_extjemallocopenssl3
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extNoneopenssl1.1.1:
-        CONFIG: osx_arm64_folly_build_extNoneopenssl1.1.1
+      osx_64_fmt9folly_build_extNoneopenssl1.1.1:
+        CONFIG: osx_64_fmt9folly_build_extNoneopenssl1.1.1
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extNoneopenssl3:
-        CONFIG: osx_arm64_folly_build_extNoneopenssl3
+      osx_64_fmt9folly_build_extNoneopenssl3:
+        CONFIG: osx_64_fmt9folly_build_extNoneopenssl3
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extjemallocopenssl1.1.1:
-        CONFIG: osx_arm64_folly_build_extjemallocopenssl1.1.1
+      osx_64_fmt9folly_build_extjemallocopenssl1.1.1:
+        CONFIG: osx_64_fmt9folly_build_extjemallocopenssl1.1.1
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extjemallocopenssl3:
-        CONFIG: osx_arm64_folly_build_extjemallocopenssl3
+      osx_64_fmt9folly_build_extjemallocopenssl3:
+        CONFIG: osx_64_fmt9folly_build_extjemallocopenssl3
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt8.0.1folly_build_extNoneopenssl1.1.1:
+        CONFIG: osx_arm64_fmt8.0.1folly_build_extNoneopenssl1.1.1
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt8.0.1folly_build_extNoneopenssl3:
+        CONFIG: osx_arm64_fmt8.0.1folly_build_extNoneopenssl3
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt8.0.1folly_build_extjemallocopenssl1.1.1:
+        CONFIG: osx_arm64_fmt8.0.1folly_build_extjemallocopenssl1.1.1
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt8.0.1folly_build_extjemallocopenssl3:
+        CONFIG: osx_arm64_fmt8.0.1folly_build_extjemallocopenssl3
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt9folly_build_extNoneopenssl1.1.1:
+        CONFIG: osx_arm64_fmt9folly_build_extNoneopenssl1.1.1
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt9folly_build_extNoneopenssl3:
+        CONFIG: osx_arm64_fmt9folly_build_extNoneopenssl3
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt9folly_build_extjemallocopenssl1.1.1:
+        CONFIG: osx_arm64_fmt9folly_build_extjemallocopenssl1.1.1
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_fmt9folly_build_extjemallocopenssl3:
+        CONFIG: osx_arm64_fmt9folly_build_extjemallocopenssl3
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 

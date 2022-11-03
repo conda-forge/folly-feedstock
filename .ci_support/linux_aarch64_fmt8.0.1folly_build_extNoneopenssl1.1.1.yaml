@@ -1,9 +1,13 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 boost_cpp:
 - 1.78.0
 bzip2:
 - '1'
+cdt_arch:
+- aarch64
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,7 +19,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
-- '9'
+- 8.0.1
 folly_build_ext:
 - None
 gflags:
@@ -32,7 +36,7 @@ pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
 target_platform:
-- linux-64
+- linux-aarch64
 xz:
 - '5'
 zlib:
