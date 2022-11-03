@@ -1,3 +1,6 @@
 folly_build_ext:
   - None
   - "jemalloc"
+fmt:
+  - "9"
+  - "8.0.1"
