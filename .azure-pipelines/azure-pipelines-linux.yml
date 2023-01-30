@@ -8,100 +8,52 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_fmt8.0.1folly_build_extNoneopenssl1.1.1:
-        CONFIG: linux_64_fmt8.0.1folly_build_extNoneopenssl1.1.1
+      linux_64_fmt8.0.1folly_build_extNone:
+        CONFIG: linux_64_fmt8.0.1folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt8.0.1folly_build_extNoneopenssl3:
-        CONFIG: linux_64_fmt8.0.1folly_build_extNoneopenssl3
+      linux_64_fmt8.0.1folly_build_extjemalloc:
+        CONFIG: linux_64_fmt8.0.1folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1:
-        CONFIG: linux_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1
+      linux_64_fmt9folly_build_extNone:
+        CONFIG: linux_64_fmt9folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt8.0.1folly_build_extjemallocopenssl3:
-        CONFIG: linux_64_fmt8.0.1folly_build_extjemallocopenssl3
+      linux_64_fmt9folly_build_extjemalloc:
+        CONFIG: linux_64_fmt9folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt9folly_build_extNoneopenssl1.1.1:
-        CONFIG: linux_64_fmt9folly_build_extNoneopenssl1.1.1
+      linux_aarch64_fmt8.0.1folly_build_extNone:
+        CONFIG: linux_aarch64_fmt8.0.1folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt9folly_build_extNoneopenssl3:
-        CONFIG: linux_64_fmt9folly_build_extNoneopenssl3
+      linux_aarch64_fmt8.0.1folly_build_extjemalloc:
+        CONFIG: linux_aarch64_fmt8.0.1folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt9folly_build_extjemallocopenssl1.1.1:
-        CONFIG: linux_64_fmt9folly_build_extjemallocopenssl1.1.1
+      linux_aarch64_fmt9folly_build_extNone:
+        CONFIG: linux_aarch64_fmt9folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt9folly_build_extjemallocopenssl3:
-        CONFIG: linux_64_fmt9folly_build_extjemallocopenssl3
+      linux_aarch64_fmt9folly_build_extjemalloc:
+        CONFIG: linux_aarch64_fmt9folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt8.0.1folly_build_extNoneopenssl1.1.1:
-        CONFIG: linux_aarch64_fmt8.0.1folly_build_extNoneopenssl1.1.1
+      linux_ppc64le_fmt8.0.1folly_build_extNone:
+        CONFIG: linux_ppc64le_fmt8.0.1folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt8.0.1folly_build_extNoneopenssl3:
-        CONFIG: linux_aarch64_fmt8.0.1folly_build_extNoneopenssl3
+      linux_ppc64le_fmt8.0.1folly_build_extjemalloc:
+        CONFIG: linux_ppc64le_fmt8.0.1folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl1.1.1:
-        CONFIG: linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl1.1.1
+      linux_ppc64le_fmt9folly_build_extNone:
+        CONFIG: linux_ppc64le_fmt9folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl3:
-        CONFIG: linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl3
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt9folly_build_extNoneopenssl1.1.1:
-        CONFIG: linux_aarch64_fmt9folly_build_extNoneopenssl1.1.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt9folly_build_extNoneopenssl3:
-        CONFIG: linux_aarch64_fmt9folly_build_extNoneopenssl3
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt9folly_build_extjemallocopenssl1.1.1:
-        CONFIG: linux_aarch64_fmt9folly_build_extjemallocopenssl1.1.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt9folly_build_extjemallocopenssl3:
-        CONFIG: linux_aarch64_fmt9folly_build_extjemallocopenssl3
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl1.1.1:
-        CONFIG: linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl1.1.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl3:
-        CONFIG: linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl3
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl1.1.1:
-        CONFIG: linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl1.1.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl3:
-        CONFIG: linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl3
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt9folly_build_extNoneopenssl1.1.1:
-        CONFIG: linux_ppc64le_fmt9folly_build_extNoneopenssl1.1.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt9folly_build_extNoneopenssl3:
-        CONFIG: linux_ppc64le_fmt9folly_build_extNoneopenssl3
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt9folly_build_extjemallocopenssl1.1.1:
-        CONFIG: linux_ppc64le_fmt9folly_build_extjemallocopenssl1.1.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt9folly_build_extjemallocopenssl3:
-        CONFIG: linux_ppc64le_fmt9folly_build_extjemallocopenssl3
+      linux_ppc64le_fmt9folly_build_extjemalloc:
+        CONFIG: linux_ppc64le_fmt9folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360

@@ -39,283 +39,143 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_fmt8.0.1folly_build_extNoneopenssl1.1.1</td>
+              <td>linux_64_fmt8.0.1folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt8.0.1folly_build_extNoneopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt8.0.1folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_fmt8.0.1folly_build_extNoneopenssl3</td>
+              <td>linux_64_fmt8.0.1folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt8.0.1folly_build_extNoneopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt8.0.1folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1</td>
+              <td>linux_64_fmt9folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt9folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_fmt8.0.1folly_build_extjemallocopenssl3</td>
+              <td>linux_64_fmt9folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt8.0.1folly_build_extjemallocopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt9folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_fmt9folly_build_extNoneopenssl1.1.1</td>
+              <td>linux_aarch64_fmt8.0.1folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt9folly_build_extNoneopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt8.0.1folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_fmt9folly_build_extNoneopenssl3</td>
+              <td>linux_aarch64_fmt8.0.1folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt9folly_build_extNoneopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt8.0.1folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_fmt9folly_build_extjemallocopenssl1.1.1</td>
+              <td>linux_aarch64_fmt9folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt9folly_build_extjemallocopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt9folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_fmt9folly_build_extjemallocopenssl3</td>
+              <td>linux_aarch64_fmt9folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_fmt9folly_build_extjemallocopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt9folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt8.0.1folly_build_extNoneopenssl1.1.1</td>
+              <td>linux_ppc64le_fmt8.0.1folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt8.0.1folly_build_extNoneopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt8.0.1folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt8.0.1folly_build_extNoneopenssl3</td>
+              <td>linux_ppc64le_fmt8.0.1folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt8.0.1folly_build_extNoneopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt8.0.1folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl1.1.1</td>
+              <td>linux_ppc64le_fmt9folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt9folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl3</td>
+              <td>linux_ppc64le_fmt9folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt8.0.1folly_build_extjemallocopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt9folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt9folly_build_extNoneopenssl1.1.1</td>
+              <td>osx_64_fmt8.0.1folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt9folly_build_extNoneopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt8.0.1folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt9folly_build_extNoneopenssl3</td>
+              <td>osx_64_fmt8.0.1folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt9folly_build_extNoneopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt8.0.1folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt9folly_build_extjemallocopenssl1.1.1</td>
+              <td>osx_64_fmt9folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt9folly_build_extjemallocopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt9folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_fmt9folly_build_extjemallocopenssl3</td>
+              <td>osx_64_fmt9folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_fmt9folly_build_extjemallocopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt9folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl1.1.1</td>
+              <td>osx_arm64_fmt8.0.1folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt8.0.1folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl3</td>
+              <td>osx_arm64_fmt8.0.1folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt8.0.1folly_build_extNoneopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt8.0.1folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl1.1.1</td>
+              <td>osx_arm64_fmt9folly_build_extNone</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl1.1.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt9folly_build_extNone" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl3</td>
+              <td>osx_arm64_fmt9folly_build_extjemalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt8.0.1folly_build_extjemallocopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_fmt9folly_build_extNoneopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt9folly_build_extNoneopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_fmt9folly_build_extNoneopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt9folly_build_extNoneopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_fmt9folly_build_extjemallocopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt9folly_build_extjemallocopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le_fmt9folly_build_extjemallocopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_fmt9folly_build_extjemallocopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt8.0.1folly_build_extNoneopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt8.0.1folly_build_extNoneopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt8.0.1folly_build_extNoneopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt8.0.1folly_build_extNoneopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt8.0.1folly_build_extjemallocopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt8.0.1folly_build_extjemallocopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt8.0.1folly_build_extjemallocopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt9folly_build_extNoneopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt9folly_build_extNoneopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt9folly_build_extNoneopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt9folly_build_extNoneopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt9folly_build_extjemallocopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt9folly_build_extjemallocopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fmt9folly_build_extjemallocopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_fmt9folly_build_extjemallocopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt8.0.1folly_build_extNoneopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt8.0.1folly_build_extNoneopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt8.0.1folly_build_extNoneopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt8.0.1folly_build_extNoneopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt8.0.1folly_build_extjemallocopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt8.0.1folly_build_extjemallocopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt8.0.1folly_build_extjemallocopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt8.0.1folly_build_extjemallocopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt9folly_build_extNoneopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt9folly_build_extNoneopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt9folly_build_extNoneopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt9folly_build_extNoneopenssl3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt9folly_build_extjemallocopenssl1.1.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt9folly_build_extjemallocopenssl1.1.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_fmt9folly_build_extjemallocopenssl3</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt9folly_build_extjemallocopenssl3" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_fmt9folly_build_extjemalloc" alt="variant">
                 </a>
               </td>
             </tr>
