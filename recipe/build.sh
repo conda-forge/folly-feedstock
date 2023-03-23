@@ -14,6 +14,10 @@ export CXXFLAGS="$CXXFLAGS -DFOLLY_HAVE_CLOCK_GETTIME=1"
 # Resolves error invalid conversion from 'void (*)() noexcept' to 'google::logging_fail_func_t' {aka 'void (*)() __attribute__((noreturn))'}
 export CXXFLAGS="$CXXFLAGS -fpermissive"
 
+if [[ "${target_platform}" == "linux-aarch64" ]]; then
+  export CXXFLAGS="$CXXFLAGS -flax-vector-conversions"
+fi
+
 mkdir -p _build
 cd _build
 
