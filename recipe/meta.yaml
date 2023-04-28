@@ -15,7 +15,7 @@ source:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   string: {{ build_string_ext }}
   ignore_run_exports:
