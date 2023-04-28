@@ -16,7 +16,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
   string: {{ build_string_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
