@@ -52,11 +52,13 @@ test:
   requires:
     - {{ compiler('cxx') }}
   commands:
-    - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}
-    - test -f ${PREFIX}/include/folly/folly-config.h
-    - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test
-    - test -f ./arena_test
-    - ./arena_test
+    - if not exist %LIBRARY_BIN%\folly.dll exit 1            # [win]
+    - if not exist %LIBRAY_INC%\folly\folly-config.h exit 1  # [win]
+    - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}             # [unix]
+    - test -f ${PREFIX}/include/folly/folly-config.h         # [unix]
+    - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test  # [unix]
+    - test -f ./arena_test  # [unix]
+    - ./arena_test  # [unix]
 
 about:
   home: https://github.com/facebook/folly
