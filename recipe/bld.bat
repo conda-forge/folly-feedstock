@@ -1,4 +1,4 @@
-cmake -G "NMake Makefiles" ^
+cmake -GNinja ^
       -DBoost_NO_BOOST_CMAKE=ON ^
       -DBUILD_SHARED_LIBS=OFF ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
@@ -9,8 +9,8 @@ cmake -G "NMake Makefiles" ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
-nmake
+ninja
 if errorlevel 1 exit 1
 
-nmake install
+ninja install
 if errorlevel 1 exit 1
