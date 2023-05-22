@@ -52,10 +52,10 @@ test:
   requires:
     - {{ compiler('cxx') }}
   commands:
-    - if not exist %LIBRARY_BIN%\folly.dll exit 1            # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\folly.lib exit 1      # [win]
     - if not exist %LIBRARY_INC%\folly\folly-config.h exit 1  # [win]
-    - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}             # [unix]
-    - test -f ${PREFIX}/include/folly/folly-config.h         # [unix]
+    - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}              # [unix]
+    - test -f ${PREFIX}/include/folly/folly-config.h          # [unix]
     - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test  # [unix]
     - test -f ./arena_test  # [unix]
     - ./arena_test  # [unix]
