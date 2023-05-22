@@ -8,17 +8,11 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_fmt8.0.1folly_build_extNone:
-        CONFIG: win_64_fmt8.0.1folly_build_extNone
+      win_64_fmt8.0.1:
+        CONFIG: win_64_fmt8.0.1
         UPLOAD_PACKAGES: 'True'
-      win_64_fmt8.0.1folly_build_extjemalloc:
-        CONFIG: win_64_fmt8.0.1folly_build_extjemalloc
-        UPLOAD_PACKAGES: 'True'
-      win_64_fmt9folly_build_extNone:
-        CONFIG: win_64_fmt9folly_build_extNone
-        UPLOAD_PACKAGES: 'True'
-      win_64_fmt9folly_build_extjemalloc:
-        CONFIG: win_64_fmt9folly_build_extjemalloc
+      win_64_fmt9:
+        CONFIG: win_64_fmt9
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:

@@ -179,31 +179,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_fmt8.0.1folly_build_extNone</td>
+              <td>win_64_fmt8.0.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_fmt8.0.1folly_build_extNone" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_fmt8.0.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_fmt8.0.1folly_build_extjemalloc</td>
+              <td>win_64_fmt9</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_fmt8.0.1folly_build_extjemalloc" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_fmt9folly_build_extNone</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_fmt9folly_build_extNone" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_fmt9folly_build_extjemalloc</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_fmt9folly_build_extjemalloc" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_fmt9" alt="variant">
                 </a>
               </td>
             </tr>
