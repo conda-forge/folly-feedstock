@@ -8,6 +8,14 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
+      linux_64_fmt10folly_build_extNone:
+        CONFIG: linux_64_fmt10folly_build_extNone
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_fmt10folly_build_extjemalloc:
+        CONFIG: linux_64_fmt10folly_build_extjemalloc
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_fmt8.0.1folly_build_extNone:
         CONFIG: linux_64_fmt8.0.1folly_build_extNone
         UPLOAD_PACKAGES: 'True'
@@ -16,12 +24,12 @@ jobs:
         CONFIG: linux_64_fmt8.0.1folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt9folly_build_extNone:
-        CONFIG: linux_64_fmt9folly_build_extNone
+      linux_aarch64_fmt10folly_build_extNone:
+        CONFIG: linux_aarch64_fmt10folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt9folly_build_extjemalloc:
-        CONFIG: linux_64_fmt9folly_build_extjemalloc
+      linux_aarch64_fmt10folly_build_extjemalloc:
+        CONFIG: linux_aarch64_fmt10folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_fmt8.0.1folly_build_extNone:
@@ -32,12 +40,12 @@ jobs:
         CONFIG: linux_aarch64_fmt8.0.1folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt9folly_build_extNone:
-        CONFIG: linux_aarch64_fmt9folly_build_extNone
+      linux_ppc64le_fmt10folly_build_extNone:
+        CONFIG: linux_ppc64le_fmt10folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt9folly_build_extjemalloc:
-        CONFIG: linux_aarch64_fmt9folly_build_extjemalloc
+      linux_ppc64le_fmt10folly_build_extjemalloc:
+        CONFIG: linux_ppc64le_fmt10folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_fmt8.0.1folly_build_extNone:
@@ -46,14 +54,6 @@ jobs:
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_fmt8.0.1folly_build_extjemalloc:
         CONFIG: linux_ppc64le_fmt8.0.1folly_build_extjemalloc
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt9folly_build_extNone:
-        CONFIG: linux_ppc64le_fmt9folly_build_extNone
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt9folly_build_extjemalloc:
-        CONFIG: linux_ppc64le_fmt9folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360

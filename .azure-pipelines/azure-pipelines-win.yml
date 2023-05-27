@@ -8,11 +8,11 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
+      win_64_fmt10:
+        CONFIG: win_64_fmt10
+        UPLOAD_PACKAGES: 'True'
       win_64_fmt8.0.1:
         CONFIG: win_64_fmt8.0.1
-        UPLOAD_PACKAGES: 'True'
-      win_64_fmt9:
-        CONFIG: win_64_fmt9
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
