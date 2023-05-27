@@ -13,7 +13,7 @@ source:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
 
 build:
-  number: 1
+  number: 2
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
