@@ -1,4 +1,6 @@
 cmake -GNinja ^
+      -LAH ^
+      -DCMAKE_VERBOSE_MAKEFILE=ON ^
       -DBoost_NO_BOOST_CMAKE=ON ^
       -DBUILD_SHARED_LIBS=ON ^
       -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
