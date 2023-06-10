@@ -8,29 +8,29 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
+      osx_64_fmt10folly_build_extNone:
+        CONFIG: osx_64_fmt10folly_build_extNone
+        UPLOAD_PACKAGES: 'True'
+      osx_64_fmt10folly_build_extjemalloc:
+        CONFIG: osx_64_fmt10folly_build_extjemalloc
+        UPLOAD_PACKAGES: 'True'
       osx_64_fmt8.0.1folly_build_extNone:
         CONFIG: osx_64_fmt8.0.1folly_build_extNone
         UPLOAD_PACKAGES: 'True'
       osx_64_fmt8.0.1folly_build_extjemalloc:
         CONFIG: osx_64_fmt8.0.1folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
-      osx_64_fmt9folly_build_extNone:
-        CONFIG: osx_64_fmt9folly_build_extNone
+      osx_arm64_fmt10folly_build_extNone:
+        CONFIG: osx_arm64_fmt10folly_build_extNone
         UPLOAD_PACKAGES: 'True'
-      osx_64_fmt9folly_build_extjemalloc:
-        CONFIG: osx_64_fmt9folly_build_extjemalloc
+      osx_arm64_fmt10folly_build_extjemalloc:
+        CONFIG: osx_arm64_fmt10folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
       osx_arm64_fmt8.0.1folly_build_extNone:
         CONFIG: osx_arm64_fmt8.0.1folly_build_extNone
         UPLOAD_PACKAGES: 'True'
       osx_arm64_fmt8.0.1folly_build_extjemalloc:
         CONFIG: osx_arm64_fmt8.0.1folly_build_extjemalloc
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_fmt9folly_build_extNone:
-        CONFIG: osx_arm64_fmt9folly_build_extNone
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_fmt9folly_build_extjemalloc:
-        CONFIG: osx_arm64_fmt9folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
