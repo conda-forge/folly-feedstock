@@ -5,6 +5,3 @@ MACOSX_DEPLOYMENT_TARGET:  # [osx and x86_64]
 folly_build_ext:
   - None
   - "jemalloc"  # [not win]
-fmt:
-  - "9"
-  - "8.0.1"
