@@ -15,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '15'
 fmt:
-- 8.0.1
+- '10'
 folly_build_ext:
 - jemalloc
 gflags:

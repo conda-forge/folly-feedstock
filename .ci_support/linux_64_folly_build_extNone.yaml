@@ -15,9 +15,9 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
-- 8.0.1
+- '10'
 folly_build_ext:
-- jemalloc
+- None
 gflags:
 - '2.2'
 glog:
