@@ -1,0 +1,89 @@
+From 413b82b8c0e44a30d55a7eaf4c7b6f2388aac624 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Mon, 12 Jun 2023 09:31:05 +0200
+Subject: [PATCH] debug: Boost linking for shared libraries
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ CMake/folly-deps.cmake | 14 ++++++++++++++
+ CMakeLists.txt         |  8 ++++++++
+ 2 files changed, 22 insertions(+)
+
+diff --git a/CMake/folly-deps.cmake b/CMake/folly-deps.cmake
+index 989259a87..e434ebb92 100644
+--- a/CMake/folly-deps.cmake
++++ b/CMake/folly-deps.cmake
+@@ -35,6 +35,9 @@ else()
+ endif()
+ set(Boost_USE_STATIC_LIBS "${FOLLY_BOOST_LINK_STATIC}")
+ 
++message(STATUS "FOLLY_BOOST_LINK_STATIC: ${FOLLY_BOOST_LINK_STATIC}")
++message(STATUS "Boost_USE_STATIC_LIBS: ${Boost_USE_STATIC_LIBS}")
++
+ find_package(Boost 1.51.0 MODULE
+   COMPONENTS
+     context
+@@ -45,9 +48,16 @@ find_package(Boost 1.51.0 MODULE
+     thread
+   REQUIRED
+ )
++
+ list(APPEND FOLLY_LINK_LIBRARIES ${Boost_LIBRARIES})
+ list(APPEND FOLLY_INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIRS})
+ 
++list(APPEND FOLLY_LINK_LIBRARIES ${BOOST_LIBRARIES})
++list(APPEND FOLLY_INCLUDE_DIRECTORIES ${BOOST_INCLUDE_DIRS})
++
++message(STATUS "FOLLY_LINK_LIBRARIES after BOOST inclusion     : ${FOLLY_LINK_LIBRARIES}")
++message(STATUS "FOLLY_INCLUDE_DIRECTORIES after BOOST inclusion: ${FOLLY_INCLUDE_DIRECTORIES}")
++
+ find_package(DoubleConversion MODULE REQUIRED)
+ list(APPEND FOLLY_LINK_LIBRARIES ${DOUBLE_CONVERSION_LIBRARY})
+ list(APPEND FOLLY_INCLUDE_DIRECTORIES ${DOUBLE_CONVERSION_INCLUDE_DIR})
+@@ -307,6 +317,10 @@ endif()
+ target_link_libraries(folly_deps INTERFACE fmt::fmt)
+ 
+ list(REMOVE_DUPLICATES FOLLY_INCLUDE_DIRECTORIES)
++
++message(STATUS "Final FOLLY_LINK_LIBRARIES     : ${FOLLY_LINK_LIBRARIES}")
++message(STATUS "Final FOLLY_INCLUDE_DIRECTORIES: ${FOLLY_INCLUDE_DIRECTORIES}")
++
+ target_include_directories(folly_deps INTERFACE ${FOLLY_INCLUDE_DIRECTORIES})
+ target_link_libraries(folly_deps INTERFACE
+   ${FOLLY_LINK_LIBRARIES}
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 85ba70d3b..1b346cd59 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -421,6 +421,8 @@ target_compile_definitions(folly_base
+ 
+ set(FOLLY_INSTALL_TARGETS folly folly_deps)
+ 
++message(STATUS "Global -- folly_deps: ${folly_deps}")
++
+ option(PYTHON_EXTENSIONS
+   "Build Python Bindings for Folly, requires Cython and (BUILD_SHARED_LIBS=ON)"
+   OFF
+@@ -440,6 +442,10 @@ add_library(folly_test_util
+   ${FOLLY_DIR}/test/DeterministicSchedule.cpp
+   ${FOLLY_DIR}/test/JsonTestUtil.cpp
+ )
++
++message(STATUS "Global -- Boost_LIBRARIES: ${Boost_LIBRARIES}")
++message(STATUS "Global -- BOOST_LIBRARIES: ${BOOST_LIBRARIES}")
++
+ set_property(TARGET folly_test_util PROPERTY VERSION ${PACKAGE_VERSION})
+ target_link_libraries(folly_test_util
+   PUBLIC
+@@ -593,6 +599,8 @@ if (BUILD_TESTS OR BUILD_BENCHMARKS)
+       ${LIBGMOCK_INCLUDE_DIR}
+       ${GTEST_INCLUDE_DIRS}
+   )
++  message(STATUS "Global (TESTS) -- Boost_LIBRARIES: ${Boost_LIBRARIES}")
++  message(STATUS "Global (TESTS) -- BOOST_LIBRARIES: ${BOOST_LIBRARIES}")
+   target_link_libraries(folly_test_support
+     PUBLIC
+       ${BOOST_LIBRARIES}
+-- 
+2.40.0
+
