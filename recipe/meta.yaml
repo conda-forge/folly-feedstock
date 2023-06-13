@@ -13,7 +13,7 @@ source:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
 
 build:
-  number: 0
+  number: 1
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
@@ -52,8 +52,13 @@ test:
   requires:
     - {{ compiler('cxx') }}
   commands:
-    - if not exist %LIBRARY_PREFIX%\lib\folly.lib exit 1      # [win]
-    - if not exist %LIBRARY_INC%\folly\folly-config.h exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\folly.lib (exit 1)                                       # [win]
+    - if not exist %LIBRARY_LIB%\folly_test_util.lib (exit 1)                             # [win]
+    - if not exist %LIBRARY_INC%\folly\folly-config.h (exit 1)                            # [win]
+    - if not exist %LIBRARY_LIB%\cmake\folly\folly-config.cmake (exit 1)                  # [win]
+    - if not exist %LIBRARY_LIB%\cmake\folly\folly-targets.cmake (exit 1)                 # [win]
+    - if not exist %LIBRARY_LIB%\cmake\folly\folly-targets-relwithdebinfo.cmake (exit 1)  # [win]
+
     - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}              # [unix]
     - test -f ${PREFIX}/include/folly/folly-config.h          # [unix]
     - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test  # [unix]
