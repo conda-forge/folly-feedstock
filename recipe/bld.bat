@@ -1,9 +1,7 @@
 cmake -GNinja ^
-      -LAH ^
-      -DCMAKE_VERBOSE_MAKEFILE=ON ^
       -DBoost_NO_BOOST_CMAKE=ON ^
       -DBUILD_SHARED_LIBS=OFF ^
-      -DCMAKE_BUILD_TYPE=Release ^
+      -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -DBOOST_ROOT=%LIBRARY_PREFIX% ^
       -DBOOST_LINK_STATIC=OFF ^
