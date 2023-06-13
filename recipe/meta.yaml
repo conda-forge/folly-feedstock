@@ -53,8 +53,7 @@ test:
   requires:
     - {{ compiler('cxx') }}
   commands:
-    - if not exist %LIBRARY_LIB%\folly.lib (exit 1)                                       # [win]
-    - if not exist %LIBRARY_BIN%\folly.dll (exit 1)                                       # [win]
+    - if not exist %LIBRARY_LIB%\folly-static.lib (exit 1)                                # [win]
     - if not exist %LIBRARY_INC%\folly\folly-config.h (exit 1)                            # [win]
     - if not exist %LIBRARY_LIB%\cmake\folly\folly-config.cmake (exit 1)                  # [win]
     - if not exist %LIBRARY_LIB%\cmake\folly\folly-targets.cmake (exit 1)                 # [win]
