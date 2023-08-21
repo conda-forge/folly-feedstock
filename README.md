@@ -3,6 +3,10 @@ About folly-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/folly-feedstock/blob/main/LICENSE.txt)
 
+
+About folly
+-----------
+
 Home: https://github.com/facebook/folly
 
 Package license: Apache-2.0
@@ -14,6 +18,21 @@ Development: https://github.com/facebook/folly
 Documentation: https://github.com/facebook/folly/tree/master/folly/docs
 
 Shared Library for folly, considered unstable!
+
+About folly-static
+------------------
+
+Home: https://github.com/facebook/folly
+
+Package license: Apache-2.0
+
+Summary: Facebook Open-source Library — Static Library
+
+Development: https://github.com/facebook/folly
+
+Documentation: https://github.com/facebook/folly/tree/master/folly/docs
+
+Static Library for folly
 
 Current build status
 ====================
@@ -200,6 +219,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-folly-green.svg)](https://anaconda.org/conda-forge/folly) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/folly.svg)](https://anaconda.org/conda-forge/folly) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/folly.svg)](https://anaconda.org/conda-forge/folly) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/folly.svg)](https://anaconda.org/conda-forge/folly) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-folly--static-green.svg)](https://anaconda.org/conda-forge/folly-static) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/folly-static.svg)](https://anaconda.org/conda-forge/folly-static) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/folly-static.svg)](https://anaconda.org/conda-forge/folly-static) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/folly-static.svg)](https://anaconda.org/conda-forge/folly-static) |
 
 Installing folly
 ================
@@ -211,16 +231,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `folly` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `folly, folly-static` can be installed with `conda`:
 
 ```
-conda install folly
+conda install folly folly-static
 ```
 
 or with `mamba`:
 
 ```
-mamba install folly
+mamba install folly folly-static
 ```
 
 It is possible to list all of the versions of `folly` available on your platform with `conda`:
