@@ -1,6 +1,7 @@
 {% set version = "2023.08.14.00" %}
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 {% set build_ext = "_jemalloc" if jemalloc_enabled else ""  %}
+{% set build_number = 1 %}
 
 package:
   name: folly
@@ -13,57 +14,73 @@ source:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
 
 build:
-  number: 0
+  number: {{ build_number }}
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
     - jemalloc-local  # [osx and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
 
-requirements:
-  build:
-    - {{ compiler('cxx') }}
-    - cmake
-    - ninja
-  host:
-    - boost-cpp
-    - double-conversion
-    - fmt {{ fmt }}
-    - gflags
-    - glog
-    - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
-    - jemalloc-local  # [osx and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
-    - libaio  # [linux]
-    - libevent
-    - libsodium
-    - snappy
-    - bzip2
-    - lz4-c
-    - openssl
-    - xz
-    - zlib
-    - zstd
-  run:
-    - boost-cpp
-    - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
-    - jemalloc-local  # [osx and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
-    - snappy
+outputs:
+  # Shared library, considered unstable!
+  # See: https://github.com/facebook/folly/#build-notes
+  - name: folly
+    version: {{ version }}
+    build:
+      number: {{ build_number }}
+      string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
+    requirements:
+      build:
+        - {{ compiler('cxx') }}
+        - cmake
+        - ninja
+      host:
+        - boost-cpp
+        - double-conversion
+        - fmt {{ fmt }}
+        - gflags
+        - glog
+        - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
+        - jemalloc-local  # [osx and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
+        - libaio  # [linux]
+        - libevent
+        - libsodium
+        - snappy
+        - bzip2
+        - lz4-c
+        - openssl
+        - xz
+        - zlib
+        - zstd
+      run:
+        - boost-cpp
+        - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
+        - jemalloc-local  # [osx and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
+        - snappy
+    test:
+      requires:
+        - {{ compiler('cxx') }}
+      commands:
+        - if not exist %LIBRARY_LIB%\folly.lib (exit 1)                                       # [win]
+        - if not exist %LIBRARY_LIB%\folly_test_util.lib (exit 1)                             # [win]
+        - if not exist %LIBRARY_INC%\folly\folly-config.h (exit 1)                            # [win]
+        - if not exist %LIBRARY_LIB%\cmake\folly\folly-config.cmake (exit 1)                  # [win]
+        - if not exist %LIBRARY_LIB%\cmake\folly\folly-targets.cmake (exit 1)                 # [win]
+        - if not exist %LIBRARY_LIB%\cmake\folly\folly-targets-relwithdebinfo.cmake (exit 1)  # [win]
 
-test:
-  requires:
-    - {{ compiler('cxx') }}
-  commands:
-    - if not exist %LIBRARY_LIB%\folly.lib (exit 1)                                       # [win]
-    - if not exist %LIBRARY_LIB%\folly_test_util.lib (exit 1)                             # [win]
-    - if not exist %LIBRARY_INC%\folly\folly-config.h (exit 1)                            # [win]
-    - if not exist %LIBRARY_LIB%\cmake\folly\folly-config.cmake (exit 1)                  # [win]
-    - if not exist %LIBRARY_LIB%\cmake\folly\folly-targets.cmake (exit 1)                 # [win]
-    - if not exist %LIBRARY_LIB%\cmake\folly\folly-targets-relwithdebinfo.cmake (exit 1)  # [win]
+        - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}              # [unix]
+        - test -f ${PREFIX}/include/folly/folly-config.h          # [unix]
+        - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test  # [unix]
+        - test -f ./arena_test  # [unix]
+        - ./arena_test  # [unix]
 
-    - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}              # [unix]
-    - test -f ${PREFIX}/include/folly/folly-config.h          # [unix]
-    - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test  # [unix]
-    - test -f ./arena_test  # [unix]
-    - ./arena_test  # [unix]
+    about:
+      home: https://github.com/facebook/folly
+      license: Apache-2.0
+      license_file: LICENSE
+      summary: Facebook Open-source Library — Shared Library
+      description: Shared Library for folly, considered unstable!
+      doc_url: https://github.com/facebook/folly/tree/master/folly/docs
+      dev_url: https://github.com/facebook/folly
 
 about:
   home: https://github.com/facebook/folly
