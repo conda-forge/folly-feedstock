@@ -50,7 +50,16 @@ if [[ "${target_platform}" == "linux-ppc64le" ]]; then
     CMAKE_ARGS="${CMAKE_ARGS} -DHAVE_VSNPRINTF_ERRORS_EXITCODE=0 -DHAVE_VSNPRINTF_ERRORS_EXITCODE__TRYRUN_OUTPUT=''"
 fi
 
-cmake ${CMAKE_ARGS} -Wno-dev -GNinja -DBUILD_SHARED_LIBS=ON ..
+# Build a shared library for the "folly" package or
+# build a static library for the "folly-static" package.
+if [[ ! -z "${PKG_NAME+x}" && "${PKG_NAME}" == "folly" ]]
+then
+    CMAKE_ARGS="${CMAKE_ARGS} -DBUILD_SHARED_LIBS=ON"
+else
+    CMAKE_ARGS="${CMAKE_ARGS} -DBUILD_SHARED_LIBS=OFF"
+fi
+
+cmake ${CMAKE_ARGS} -Wno-dev -GNinja ..
 
 cat CMakeCache.txt
 

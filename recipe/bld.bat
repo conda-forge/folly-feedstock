@@ -1,6 +1,15 @@
+REM Build a shared library for the "folly" package or
+REM build a static library for the "folly-static" package.
+if "%PKG_NAME%" == "folly" (
+  set BUILD_SHARED_LIBS=ON
+)
+else (
+  set BUILD_SHARED_LIBS=OFF
+)
+
 cmake -GNinja ^
       -DBoost_NO_BOOST_CMAKE=ON ^
-      -DBUILD_SHARED_LIBS=OFF ^
+      -DBUILD_SHARED_LIBS=%BUILD_SHARED_LIBS% ^
       -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -DBOOST_ROOT=%LIBRARY_PREFIX% ^
