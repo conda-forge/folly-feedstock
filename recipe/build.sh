@@ -59,11 +59,17 @@ else
     CMAKE_ARGS="${CMAKE_ARGS} -DBUILD_SHARED_LIBS=OFF"
 fi
 
+echo "a) THE PREFIX" $PREFIX 
+echo "a) THE BUILD PREFIX" $BUILD_PREFIX
+
 $BUILD_PREFIX/bin/cmake ${CMAKE_ARGS} -Wno-dev -GNinja ..
+
+echo "b) THE PREFIX" $PREFIX 
+echo "b) THE BUILD PREFIX" $BUILD_PREFIX
 
 cat CMakeCache.txt
 
-$BUILD_PREFIX/bin/cmake --build . --parallel
+$BUILD_PREFIX/bin/cmake --build . --parallel 
 
 $BUILD_PREFIX/bin/cmake --install .
 
