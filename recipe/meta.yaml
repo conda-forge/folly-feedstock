@@ -23,7 +23,7 @@ build:
 outputs:
   # Shared library, considered unstable!
   # See: https://github.com/facebook/folly/#build-notes
-  - name: the-shared-folly
+  - name: the-shared
     version: {{ version }}
     build:
       number: {{ build_number }}
@@ -76,7 +76,7 @@ outputs:
       dev_url: https://github.com/facebook/folly
 
   # Static library
-  - name: the-static-folly
+  - name: the-static
     version: {{ version }}
     build:
       number: {{ build_number }}
