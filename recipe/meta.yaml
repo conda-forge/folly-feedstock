@@ -86,7 +86,6 @@ outputs:
         - {{ compiler('cxx') }}
         - cmake
         - ninja
-        - python
       host:
         - boost-cpp
         - double-conversion
