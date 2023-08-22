@@ -59,12 +59,12 @@ else
     CMAKE_ARGS="${CMAKE_ARGS} -DBUILD_SHARED_LIBS=OFF"
 fi
 
-cmake ${CMAKE_ARGS} -Wno-dev -GNinja ..
+$BUILD_PREFIX/bin/cmake ${CMAKE_ARGS} -Wno-dev -GNinja ..
 
 cat CMakeCache.txt
 
-cmake --build . --parallel
+$BUILD_PREFIX/bin/cmake --build . --parallel
 
-cmake --install .
+$BUILD_PREFIX/bin/cmake --install .
 
 cd ..
