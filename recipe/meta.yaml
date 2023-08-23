@@ -24,6 +24,8 @@ outputs:
   # Shared library, considered unstable!
   # See: https://github.com/facebook/folly/#build-notes
   - name: folly
+    script: build_folly.sh   # [unix]
+    script: build_folly.bat  # [win]
     version: {{ version }}
     build:
       number: {{ build_number }}
@@ -77,6 +79,8 @@ outputs:
 
   # Static library
   - name: folly-static
+    script: build_folly.sh   # [unix]
+    script: build_folly.bat  # [win]
     version: {{ version }}
     build:
       number: {{ build_number }}
