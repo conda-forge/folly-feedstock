@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 set -ex
+echo "RECIPE_DIR: " $RECIPE_DIR
+echo "LS" $(ls $RECIPE_DIR)
+
+cp $RECIPE_DIR/arena_test.c  $RECIPE_DIR/arena_test2.cpp
 
 # Resolves error: 'scm_timestamping' does not name a type
 export CXXFLAGS="$CXXFLAGS -DFOLLY_HAVE_SO_TIMESTAMPING=0"
