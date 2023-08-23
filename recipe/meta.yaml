@@ -4,7 +4,7 @@
 {% set build_number = 1 %}
 
 package:
-  name: folly
+  name: folly-split
   version: {{ version }}
 
 source:
@@ -23,7 +23,7 @@ build:
 outputs:
   # Shared library, considered unstable!
   # See: https://github.com/facebook/folly/#build-notes
-  - name: the-shared
+  - name: folly
     version: {{ version }}
     build:
       number: {{ build_number }}
@@ -76,7 +76,7 @@ outputs:
       dev_url: https://github.com/facebook/folly
 
   # Static library
-  - name: the-static
+  - name: folly-static
     version: {{ version }}
     build:
       number: {{ build_number }}
