@@ -21,7 +21,7 @@ build:
   run_exports:
     # Since folly is ABI-unstable, the exact same version must be used at compile time and runtime.
     # See: https://github.com/facebook/folly/#build-notes
-    - {{ pin_subpackage('folly', exact=True) }}
+    - {{ pin_subpackage('folly', max_pin='x.x.x.x') }}
 
 requirements:
   build:
