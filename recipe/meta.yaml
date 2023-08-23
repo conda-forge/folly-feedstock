@@ -127,7 +127,7 @@ outputs:
         # TODO: adapt tests for [unix]
         - test -f ${PREFIX}/lib/libfolly.a                                                                            # [unix]
         - test -f ${PREFIX}/include/folly/folly-config.h                                                              # [unix]
-        - $CXX $CXXFLAGS $LDFLAGS /home/conda/recipe_root/arena_test.c --pthread -pthread -ld -lfolly -o arena_test   # [unix]
+        - $CXX $CXXFLAGS $LDFLAGS /home/conda/recipe_root/arena_test.c  -pthread -ld -lfolly -o arena_test   # [unix]
         - test -f ./arena_test                                                                                        # [unix]
         - ./arena_test                                                                                                # [unix]
 
