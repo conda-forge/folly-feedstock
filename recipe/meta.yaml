@@ -13,11 +13,15 @@ source:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
 
 build:
-  number: 0
+  number: 1
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
     - jemalloc-local  # [osx and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
+  run_exports:
+    # Since folly is ABI-unstable, the exact same version must be used at compile time and runtime.
+    # See: https://github.com/facebook/folly/#build-notes
+    - {{ pin_subpackage('folly', max_pin='x.x.x.x') }}
 
 requirements:
   build:
