@@ -37,6 +37,9 @@ target_platform:
 - linux-ppc64le
 xz:
 - '5'
+zip_keys:
+- - fmt
+  - libevent
 zlib:
 - '1.2'
 zstd:

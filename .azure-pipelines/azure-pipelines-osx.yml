@@ -20,14 +20,8 @@ jobs:
       osx_64_fmt10folly_build_extjemalloclibevent2.1.12:
         CONFIG: osx_64_fmt10folly_build_extjemalloclibevent2.1.12
         UPLOAD_PACKAGES: 'True'
-      osx_64_fmt9folly_build_extNonelibevent2.1.10:
-        CONFIG: osx_64_fmt9folly_build_extNonelibevent2.1.10
-        UPLOAD_PACKAGES: 'True'
       osx_64_fmt9folly_build_extNonelibevent2.1.12:
         CONFIG: osx_64_fmt9folly_build_extNonelibevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-      osx_64_fmt9folly_build_extjemalloclibevent2.1.10:
-        CONFIG: osx_64_fmt9folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
       osx_64_fmt9folly_build_extjemalloclibevent2.1.12:
         CONFIG: osx_64_fmt9folly_build_extjemalloclibevent2.1.12
@@ -44,14 +38,8 @@ jobs:
       osx_arm64_fmt10folly_build_extjemalloclibevent2.1.12:
         CONFIG: osx_arm64_fmt10folly_build_extjemalloclibevent2.1.12
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_fmt9folly_build_extNonelibevent2.1.10:
-        CONFIG: osx_arm64_fmt9folly_build_extNonelibevent2.1.10
-        UPLOAD_PACKAGES: 'True'
       osx_arm64_fmt9folly_build_extNonelibevent2.1.12:
         CONFIG: osx_arm64_fmt9folly_build_extNonelibevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_fmt9folly_build_extjemalloclibevent2.1.10:
-        CONFIG: osx_arm64_fmt9folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
       osx_arm64_fmt9folly_build_extjemalloclibevent2.1.12:
         CONFIG: osx_arm64_fmt9folly_build_extjemalloclibevent2.1.12

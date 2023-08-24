@@ -37,6 +37,9 @@ target_platform:
 - osx-arm64
 xz:
 - '5'
+zip_keys:
+- - fmt
+  - libevent
 zlib:
 - '1.2'
 zstd:

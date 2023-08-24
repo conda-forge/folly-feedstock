@@ -14,9 +14,6 @@ jobs:
       win_64_fmt10libevent2.1.12:
         CONFIG: win_64_fmt10libevent2.1.12
         UPLOAD_PACKAGES: 'True'
-      win_64_fmt9libevent2.1.10:
-        CONFIG: win_64_fmt9libevent2.1.10
-        UPLOAD_PACKAGES: 'True'
       win_64_fmt9libevent2.1.12:
         CONFIG: win_64_fmt9libevent2.1.12
         UPLOAD_PACKAGES: 'True'
