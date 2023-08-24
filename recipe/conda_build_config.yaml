@@ -6,8 +6,13 @@ folly_build_ext:
   - None
   - "jemalloc"  # [not win]
 fmt:
-  - "10"
   - "9"
+  - "9"
+  - "10"
 libevent:
   - "2.1.10"
   - "2.1.12"
+  - "2.1.12"
+zip_keys:
+  - fmt
+  - libevent
