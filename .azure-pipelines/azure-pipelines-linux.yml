@@ -8,72 +8,72 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_fmt10folly_build_extNonelibevent2.1.10:
-        CONFIG: linux_64_fmt10folly_build_extNonelibevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_fmt10folly_build_extNonelibevent2.1.12:
         CONFIG: linux_64_fmt10folly_build_extNonelibevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_fmt10folly_build_extjemalloclibevent2.1.10:
-        CONFIG: linux_64_fmt10folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_fmt10folly_build_extjemalloclibevent2.1.12:
         CONFIG: linux_64_fmt10folly_build_extjemalloclibevent2.1.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_fmt9folly_build_extNonelibevent2.1.10:
+        CONFIG: linux_64_fmt9folly_build_extNonelibevent2.1.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_fmt9folly_build_extNonelibevent2.1.12:
         CONFIG: linux_64_fmt9folly_build_extNonelibevent2.1.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_fmt9folly_build_extjemalloclibevent2.1.10:
+        CONFIG: linux_64_fmt9folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_fmt9folly_build_extjemalloclibevent2.1.12:
         CONFIG: linux_64_fmt9folly_build_extjemalloclibevent2.1.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt10folly_build_extNonelibevent2.1.10:
-        CONFIG: linux_aarch64_fmt10folly_build_extNonelibevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_fmt10folly_build_extNonelibevent2.1.12:
         CONFIG: linux_aarch64_fmt10folly_build_extNonelibevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_fmt10folly_build_extjemalloclibevent2.1.10:
-        CONFIG: linux_aarch64_fmt10folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_fmt10folly_build_extjemalloclibevent2.1.12:
         CONFIG: linux_aarch64_fmt10folly_build_extjemalloclibevent2.1.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_fmt9folly_build_extNonelibevent2.1.10:
+        CONFIG: linux_aarch64_fmt9folly_build_extNonelibevent2.1.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_fmt9folly_build_extNonelibevent2.1.12:
         CONFIG: linux_aarch64_fmt9folly_build_extNonelibevent2.1.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_fmt9folly_build_extjemalloclibevent2.1.10:
+        CONFIG: linux_aarch64_fmt9folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_fmt9folly_build_extjemalloclibevent2.1.12:
         CONFIG: linux_aarch64_fmt9folly_build_extjemalloclibevent2.1.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt10folly_build_extNonelibevent2.1.10:
-        CONFIG: linux_ppc64le_fmt10folly_build_extNonelibevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_fmt10folly_build_extNonelibevent2.1.12:
         CONFIG: linux_ppc64le_fmt10folly_build_extNonelibevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_fmt10folly_build_extjemalloclibevent2.1.10:
-        CONFIG: linux_ppc64le_fmt10folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_fmt10folly_build_extjemalloclibevent2.1.12:
         CONFIG: linux_ppc64le_fmt10folly_build_extjemalloclibevent2.1.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_ppc64le_fmt9folly_build_extNonelibevent2.1.10:
+        CONFIG: linux_ppc64le_fmt9folly_build_extNonelibevent2.1.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_fmt9folly_build_extNonelibevent2.1.12:
         CONFIG: linux_ppc64le_fmt9folly_build_extNonelibevent2.1.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_ppc64le_fmt9folly_build_extjemalloclibevent2.1.10:
+        CONFIG: linux_ppc64le_fmt9folly_build_extjemalloclibevent2.1.10
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_fmt9folly_build_extjemalloclibevent2.1.12:

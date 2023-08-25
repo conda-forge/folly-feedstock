@@ -2,14 +2,20 @@ boost_cpp:
 - 1.78.0
 bzip2:
 - '1'
+cdt_name:
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- gxx
+cxx_compiler_version:
+- '12'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
-- '10'
+- '9'
 folly_build_ext:
 - None
 gflags:
@@ -28,7 +34,7 @@ pin_run_as_build:
 snappy:
 - '1'
 target_platform:
-- win-64
+- linux-ppc64le
 xz:
 - '5'
 zip_keys:
