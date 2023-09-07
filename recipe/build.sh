@@ -2,6 +2,9 @@
 
 set -ex
 
+# Resolves OpenSSL installation path for MacOS
+export OPENSSL_ROOT_DIR=${PREFIX}
+
 # Resolves error: 'scm_timestamping' does not name a type
 export CXXFLAGS="$CXXFLAGS -DFOLLY_HAVE_SO_TIMESTAMPING=0"
 
