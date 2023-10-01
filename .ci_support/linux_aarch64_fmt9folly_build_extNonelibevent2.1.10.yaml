@@ -1,7 +1,5 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
-boost_cpp:
-- 1.78.0
 bzip2:
 - '1'
 cdt_arch:
@@ -26,15 +24,14 @@ gflags:
 - '2.2'
 glog:
 - '0.6'
+libboost_devel:
+- '1.82'
 libevent:
 - 2.1.10
 lz4_c:
 - 1.9.3
 openssl:
 - '3'
-pin_run_as_build:
-  boost-cpp:
-    max_pin: x.x.x
 snappy:
 - '1'
 target_platform:
