@@ -1,3 +1,5 @@
+set
+
 cmake -GNinja ^
       -DBoost_NO_BOOST_CMAKE=ON ^
       -DBUILD_SHARED_LIBS=OFF ^
