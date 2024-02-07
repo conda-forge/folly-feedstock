@@ -10,6 +10,7 @@ cmake -GNinja ^
       -DCMAKE_C_FLAGS="/DGLOG_NO_ABBREVIATED_SEVERITIES /DNOMINMAX /std:c++20" ^
       -DCMAKE_CXX_FLAGS="/DGLOG_NO_ABBREVIATED_SEVERITIES /DNOMINMAX /std:c++20" ^
       -DCMAKE_CXX_STANDARD=20 ^
+      -DMSVC_LANGUAGE_VERSION="c++latest" ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
