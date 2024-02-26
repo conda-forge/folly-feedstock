@@ -15,7 +15,7 @@ docker_image:
 fmt:
 - '10'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
@@ -34,9 +34,6 @@ target_platform:
 - linux-ppc64le
 xz:
 - '5'
-zip_keys:
-- - fmt
-  - libevent
 zlib:
 - '1.2'
 zstd:
