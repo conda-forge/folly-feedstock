@@ -6,7 +6,7 @@ set -ex
 export OPENSSL_ROOT_DIR=${PREFIX}
 
 export CXXFLAGS="$CXXFLAGS -DGLOG_USE_GLOG_EXPORT"
-export LDFLAGS="$LFLAGS -L${PREFIX}/lib -lglog"
+export LDFLAGS="$LDFLAGS -lglog"
 
 # Resolves error: 'scm_timestamping' does not name a type
 export CXXFLAGS="$CXXFLAGS -DFOLLY_HAVE_SO_TIMESTAMPING=0"
