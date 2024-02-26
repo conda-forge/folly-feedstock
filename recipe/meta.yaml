@@ -11,6 +11,7 @@ source:
   sha256: 25fbb2d3a502b4e5f64d5c93fd8cb3e927928838ed12011c90e2d462456198cf
   patches:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
+    - 0001-Add-missing-unistd-include.patch
 
 build:
   number: 2
