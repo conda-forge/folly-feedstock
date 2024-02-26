@@ -1,11 +1,7 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
-cdt_arch:
-- aarch64
 cdt_name:
-- cos7
+- cos6
 channel_sources:
 - conda-forge
 channel_targets:
@@ -35,12 +31,9 @@ openssl:
 snappy:
 - '1'
 target_platform:
-- linux-aarch64
+- linux-64
 xz:
 - '5'
-zip_keys:
-- - fmt
-  - libevent
 zlib:
 - '1.2'
 zstd:
