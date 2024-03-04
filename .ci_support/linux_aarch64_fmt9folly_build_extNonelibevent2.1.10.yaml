@@ -23,7 +23,7 @@ folly_build_ext:
 gflags:
 - '2.2'
 glog:
-- '0.6'
+- '0.7'
 libboost_devel:
 - '1.82'
 libevent:
