@@ -5,6 +5,23 @@ MACOSX_DEPLOYMENT_TARGET:  # [osx and x86_64]
 folly_build_ext:
   - None
   - "jemalloc"  # [not win]
+libboost_devel:
+  - "*"
+  - "*"
+  - "1.84.0"
 libevent:
   - "2.1.12"
   - "2.1.10"
+  - "2.1.10"
+# `zip_keys` is bugued
+#
+# This specification correctly builds for:
+#
+#     - libboost-devel   *    + libevent 2.1.12
+#     - libboost-devel   *    + libevent 2.1.10
+#     - libboost-devel 1.84.0 + libevent 2.1.10
+#
+# See: https://github.com/conda-forge/folly-feedstock/pull/136#discussion_r1305820893
+zip_keys:
+  - libboost_devel
+  - libevent

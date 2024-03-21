@@ -32,7 +32,7 @@ requirements:
     - cmake
     - ninja
   host:
-    - libboost-devel >=1.84
+    - libboost-devel
     - double-conversion
     - fmt {{ fmt }}
     - gflags
