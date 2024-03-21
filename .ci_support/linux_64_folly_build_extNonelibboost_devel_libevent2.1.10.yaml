@@ -1,7 +1,7 @@
 bzip2:
 - '1'
 cdt_name:
-- cos7
+- cos6
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,13 +15,15 @@ docker_image:
 fmt:
 - '10'
 folly_build_ext:
-- jemalloc
+- None
 gflags:
 - '2.2'
 glog:
 - '0.7'
+libboost_devel:
+- '*'
 libevent:
-- 2.1.12
+- 2.1.10
 lz4_c:
 - 1.9.3
 openssl:
@@ -29,9 +31,12 @@ openssl:
 snappy:
 - '1'
 target_platform:
-- linux-ppc64le
+- linux-64
 xz:
 - '5'
+zip_keys:
+- - libboost_devel
+  - libevent
 zlib:
 - '1.2'
 zstd:

@@ -20,6 +20,8 @@ gflags:
 - '2.2'
 glog:
 - '0.7'
+libboost_devel:
+- 1.84.0
 libevent:
 - 2.1.10
 lz4_c:
@@ -32,6 +34,9 @@ target_platform:
 - linux-ppc64le
 xz:
 - '5'
+zip_keys:
+- - libboost_devel
+  - libevent
 zlib:
 - '1.2'
 zstd:
