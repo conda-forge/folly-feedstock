@@ -20,8 +20,6 @@ gflags:
 - '2.2'
 glog:
 - '0.7'
-libboost_devel:
-- '1.82'
 libevent:
 - 2.1.10
 lz4_c:
