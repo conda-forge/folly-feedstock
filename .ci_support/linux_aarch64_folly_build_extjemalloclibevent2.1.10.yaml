@@ -1,7 +1,11 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
+cdt_arch:
+- aarch64
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
@@ -13,9 +17,9 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
-- '9'
+- '10'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
@@ -31,12 +35,9 @@ openssl:
 snappy:
 - '1'
 target_platform:
-- linux-64
+- linux-aarch64
 xz:
 - '5'
-zip_keys:
-- - fmt
-  - libevent
 zlib:
 - '1.2'
 zstd:

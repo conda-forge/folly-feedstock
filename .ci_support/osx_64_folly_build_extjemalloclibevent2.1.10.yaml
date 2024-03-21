@@ -13,7 +13,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '16'
 fmt:
-- '9'
+- '10'
 folly_build_ext:
 - jemalloc
 gflags:
@@ -23,7 +23,7 @@ glog:
 libboost_devel:
 - '1.82'
 libevent:
-- 2.1.12
+- 2.1.10
 lz4_c:
 - 1.9.3
 macos_machine:
@@ -36,9 +36,6 @@ target_platform:
 - osx-64
 xz:
 - '5'
-zip_keys:
-- - fmt
-  - libevent
 zlib:
 - '1.2'
 zstd:
