@@ -19,13 +19,13 @@ docker_image:
 fmt:
 - '10'
 folly_build_ext:
-- jemalloc
+- None
 gflags:
 - '2.2'
 glog:
 - '0.7'
 libboost_devel:
-- '*'
+- 1.82.0
 libevent:
 - 2.1.10
 lz4_c:

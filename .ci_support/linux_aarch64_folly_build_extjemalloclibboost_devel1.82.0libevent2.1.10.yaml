@@ -1,37 +1,41 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
+cdt_arch:
+- aarch64
+cdt_name:
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '16'
+- '12'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
 - '10'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
 - '0.7'
 libboost_devel:
-- '*'
+- 1.82.0
 libevent:
 - 2.1.10
 lz4_c:
 - 1.9.3
-macos_machine:
-- arm64-apple-darwin20.0.0
 openssl:
 - '3'
 snappy:
 - '1'
 target_platform:
-- osx-arm64
+- linux-aarch64
 xz:
 - '5'
 zlib:

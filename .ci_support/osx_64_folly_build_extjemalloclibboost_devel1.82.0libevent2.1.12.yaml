@@ -15,15 +15,15 @@ cxx_compiler_version:
 fmt:
 - '10'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
 - '0.7'
 libboost_devel:
-- '*'
+- 1.82.0
 libevent:
-- '*'
+- 2.1.12
 lz4_c:
 - 1.9.3
 macos_machine:

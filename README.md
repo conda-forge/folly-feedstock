@@ -39,6 +39,20 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
+              <td>linux_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
@@ -46,24 +60,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_folly_build_extNonelibboost_devel1.84.0libevent</td>
+              <td>linux_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonelibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_folly_build_extNonelibboost_devel_libevent2.1.10</td>
+              <td>linux_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonelibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_folly_build_extNonelibboost_devel_libevent</td>
+              <td>linux_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonelibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -74,24 +88,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_folly_build_extjemalloclibboost_devel1.84.0libevent</td>
+              <td>linux_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemalloclibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_folly_build_extjemalloclibboost_devel_libevent2.1.10</td>
+              <td>linux_aarch64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemalloclibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_folly_build_extjemalloclibboost_devel_libevent</td>
+              <td>linux_aarch64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemalloclibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -102,24 +116,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_folly_build_extNonelibboost_devel1.84.0libevent</td>
+              <td>linux_aarch64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extNonelibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_folly_build_extNonelibboost_devel_libevent2.1.10</td>
+              <td>linux_aarch64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extNonelibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_folly_build_extNonelibboost_devel_libevent</td>
+              <td>linux_aarch64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extNonelibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -130,24 +144,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_folly_build_extjemalloclibboost_devel1.84.0libevent</td>
+              <td>linux_aarch64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extjemalloclibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_folly_build_extjemalloclibboost_devel_libevent2.1.10</td>
+              <td>linux_ppc64le_folly_build_extNonelibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extjemalloclibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extNonelibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_folly_build_extjemalloclibboost_devel_libevent</td>
+              <td>linux_ppc64le_folly_build_extNonelibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_folly_build_extjemalloclibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extNonelibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -158,24 +172,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_folly_build_extNonelibboost_devel1.84.0libevent</td>
+              <td>linux_ppc64le_folly_build_extNonelibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extNonelibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extNonelibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_folly_build_extNonelibboost_devel_libevent2.1.10</td>
+              <td>linux_ppc64le_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extNonelibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_folly_build_extNonelibboost_devel_libevent</td>
+              <td>linux_ppc64le_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extNonelibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -186,24 +200,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_folly_build_extjemalloclibboost_devel1.84.0libevent</td>
+              <td>linux_ppc64le_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extjemalloclibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_folly_build_extjemalloclibboost_devel_libevent2.1.10</td>
+              <td>osx_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extjemalloclibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_folly_build_extjemalloclibboost_devel_libevent</td>
+              <td>osx_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_folly_build_extjemalloclibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -214,24 +228,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extNonelibboost_devel1.84.0libevent</td>
+              <td>osx_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonelibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extNonelibboost_devel_libevent2.1.10</td>
+              <td>osx_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonelibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extNonelibboost_devel_libevent</td>
+              <td>osx_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonelibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -242,24 +256,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent</td>
+              <td>osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extjemalloclibboost_devel_libevent2.1.10</td>
+              <td>osx_arm64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemalloclibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extNonelibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extjemalloclibboost_devel_libevent</td>
+              <td>osx_arm64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemalloclibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extNonelibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -270,24 +284,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent</td>
+              <td>osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_folly_build_extNonelibboost_devel_libevent2.1.10</td>
+              <td>osx_arm64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extNonelibboost_devel_libevent2.1.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.10" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_folly_build_extNonelibboost_devel_libevent</td>
+              <td>osx_arm64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extNonelibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extjemalloclibboost_devel1.82.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -298,24 +312,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent</td>
+              <td>osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_folly_build_extjemalloclibboost_devel_libevent2.1.10</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extjemalloclibboost_devel_libevent2.1.10" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_folly_build_extjemalloclibboost_devel_libevent</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extjemalloclibboost_devel_libevent_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12" alt="variant">
                 </a>
               </td>
             </tr>
