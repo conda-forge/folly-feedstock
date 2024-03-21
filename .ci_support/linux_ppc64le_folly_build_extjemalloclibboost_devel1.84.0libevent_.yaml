@@ -1,9 +1,5 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
-cdt_arch:
-- aarch64
 cdt_name:
 - cos7
 channel_sources:
@@ -19,7 +15,7 @@ docker_image:
 fmt:
 - '10'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
@@ -27,7 +23,7 @@ glog:
 libboost_devel:
 - 1.84.0
 libevent:
-- 2.1.10
+- '*'
 lz4_c:
 - 1.9.3
 openssl:
@@ -35,7 +31,7 @@ openssl:
 snappy:
 - '1'
 target_platform:
-- linux-aarch64
+- linux-ppc64le
 xz:
 - '5'
 zlib:

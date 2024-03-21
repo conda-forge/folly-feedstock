@@ -27,7 +27,7 @@ glog:
 libboost_devel:
 - 1.84.0
 libevent:
-- 2.1.10
+- '*'
 lz4_c:
 - 1.9.3
 openssl:
