@@ -1,0 +1,42 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
+MACOSX_SDK_VERSION:
+- '11.0'
+bzip2:
+- '1'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '16'
+fmt:
+- '10'
+folly_build_ext:
+- jemalloc
+gflags:
+- '2.2'
+glog:
+- '0.7'
+libboost_devel:
+- 1.84.0
+libevent:
+- 2.1.10
+lz4_c:
+- 1.9.3
+macos_machine:
+- x86_64-apple-darwin13.4.0
+openssl:
+- '3'
+snappy:
+- '1'
+target_platform:
+- osx-64
+xz:
+- '5'
+zlib:
+- '1.2'
+zstd:
+- '1.5'
