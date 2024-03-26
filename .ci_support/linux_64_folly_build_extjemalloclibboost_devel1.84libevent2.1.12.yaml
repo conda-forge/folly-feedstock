@@ -1,5 +1,9 @@
 bzip2:
 - '1'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.12'
 cdt_name:
 - cos6
 channel_sources:
@@ -15,15 +19,15 @@ docker_image:
 fmt:
 - '10'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
 - '0.7'
 libboost_devel:
-- 1.82.0
+- '1.84'
 libevent:
-- 2.1.10
+- 2.1.12
 lz4_c:
 - 1.9.3
 openssl:
@@ -34,6 +38,9 @@ target_platform:
 - linux-64
 xz:
 - '5'
+zip_keys:
+- - c_stdlib_version
+  - cdt_name
 zlib:
 - '1.2'
 zstd:

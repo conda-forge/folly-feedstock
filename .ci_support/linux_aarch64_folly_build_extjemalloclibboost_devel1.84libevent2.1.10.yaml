@@ -1,7 +1,15 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
+cdt_arch:
+- aarch64
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
@@ -21,9 +29,9 @@ gflags:
 glog:
 - '0.7'
 libboost_devel:
-- 1.82.0
+- '1.84'
 libevent:
-- 2.1.12
+- 2.1.10
 lz4_c:
 - 1.9.3
 openssl:
@@ -31,9 +39,12 @@ openssl:
 snappy:
 - '1'
 target_platform:
-- linux-64
+- linux-aarch64
 xz:
 - '5'
+zip_keys:
+- - c_stdlib_version
+  - cdt_name
 zlib:
 - '1.2'
 zstd:
