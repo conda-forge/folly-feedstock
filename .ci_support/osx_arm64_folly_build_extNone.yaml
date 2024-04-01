@@ -38,9 +38,6 @@ target_platform:
 - osx-arm64
 xz:
 - '5'
-zip_keys:
-- - c_stdlib_version
-  - MACOSX_DEPLOYMENT_TARGET
 zlib:
 - '1.2'
 zstd:
