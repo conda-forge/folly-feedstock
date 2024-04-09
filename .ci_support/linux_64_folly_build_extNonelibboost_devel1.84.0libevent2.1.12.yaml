@@ -33,7 +33,7 @@ lz4_c:
 openssl:
 - '3'
 snappy:
-- '1'
+- '1.2'
 target_platform:
 - linux-64
 xz:
