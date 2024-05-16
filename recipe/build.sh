@@ -26,11 +26,12 @@ fi
 mkdir -p _build
 cd _build
 
-if [[ ! -z "${folly_build_ext+x}" && "${folly_build_ext}" == "jemalloc" ]]
-then
-    CMAKE_ARGS="${CMAKE_ARGS} -DENABLE_JEMALLOC=ON"
+if [[ ! -z "${folly_build_ext+x}" && "${folly_build_ext}" == "jemalloc" ]]; then
+    export CXXFLAGS="${CXXFLAGS} -DFOLLY_HAVE_LIBJEMALLOC=1"
+    CMAKE_ARGS="${CMAKE_ARGS} -DFOLLY_USE_JEMALLOC=ON"
 else
-    CMAKE_ARGS="${CMAKE_ARGS} -DENABLE_JEMALLOC=OFF"
+    export CXXFLAGS="${CXXFLAGS} -DFOLLY_HAVE_LIBJEMALLOC=0"
+    CMAKE_ARGS="${CMAKE_ARGS} -DFOLLY_USE_JEMALLOC=OFF"
 fi
 
 # Values for cross-compilation
@@ -56,8 +57,6 @@ if [[ "${target_platform}" == "linux-ppc64le" ]]; then
 fi
 
 cmake ${CMAKE_ARGS} -Wno-dev -GNinja -DBUILD_SHARED_LIBS=ON ..
-
-cat CMakeCache.txt
 
 cmake --build . --parallel
 
