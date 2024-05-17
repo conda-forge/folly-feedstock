@@ -30,7 +30,7 @@ mkdir -p _build
 cd _build
 
 if [[ ! -z "${folly_build_ext+x}" && "${folly_build_ext}" == "jemalloc" ]]; then
-    export CXXFLAGS="${CXXFLAGS} -DFOLLY_HAVE_LIBJEMALLOC=1"
+    export CXXFLAGS="${CXXFLAGS} -DFOLLY_HAVE_LIBJEMALLOC=1 -DFOLLY_USE_JEMALLOC=1"
     CMAKE_ARGS="${CMAKE_ARGS} -DFOLLY_USE_JEMALLOC=ON"
 else
     export CXXFLAGS="${CXXFLAGS} -DFOLLY_HAVE_LIBJEMALLOC=0"
