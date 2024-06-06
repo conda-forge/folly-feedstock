@@ -4,6 +4,10 @@ MACOSX_SDK_VERSION:
 - '11.0'
 bzip2:
 - '1'
+c_stdlib:
+- macosx_deployment_target
+c_stdlib_version:
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -21,7 +25,7 @@ gflags:
 glog:
 - '0.7'
 libboost_devel:
-- '1.82'
+- '1.84'
 libevent:
 - 2.1.12
 lz4_c:
@@ -31,7 +35,7 @@ macos_machine:
 openssl:
 - '3'
 snappy:
-- '1'
+- '1.2'
 target_platform:
 - osx-64
 xz:

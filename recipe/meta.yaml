@@ -14,9 +14,7 @@ source:
     - 0001-Add-missing-unistd-include.patch
 
 build:
-  # TODO: Skip all builds for the creation of the 2024.02.19.00 branch
-  skip: true
-  number: 2
+  number: 3
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
@@ -29,6 +27,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - cmake
     - ninja
   host:
