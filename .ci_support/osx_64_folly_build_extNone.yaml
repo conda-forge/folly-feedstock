@@ -21,7 +21,7 @@ gflags:
 glog:
 - '0.7'
 libboost_devel:
-- '1.82'
+- '1.84'
 libevent:
 - 2.1.12
 lz4_c:
@@ -31,7 +31,7 @@ macos_machine:
 openssl:
 - '3'
 snappy:
-- '1'
+- '1.2'
 target_platform:
 - osx-64
 xz:
