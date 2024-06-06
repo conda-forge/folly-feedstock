@@ -90,6 +90,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - JohanMabille
     - jjerphan
     - pearu
     - xhochy
