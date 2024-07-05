@@ -12,6 +12,7 @@ source:
   patches:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
     - 0001-Add-missing-unistd-include.patch
+    - 0001-Add-aarch64-based-memcpy-files-to-CMake-build.patch
 
 build:
   number: 0
