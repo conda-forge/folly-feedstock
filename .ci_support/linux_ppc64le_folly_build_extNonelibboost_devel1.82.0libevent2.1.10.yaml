@@ -17,7 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
-- '10'
+- '11'
 folly_build_ext:
 - None
 gflags:
@@ -42,6 +42,6 @@ zip_keys:
 - - c_stdlib_version
   - cdt_name
 zlib:
-- '1.2'
+- '1'
 zstd:
 - '1.5'
