@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 fmt:
-- '10'
+- '11'
 folly_build_ext:
 - None
 gflags:
@@ -31,6 +31,6 @@ target_platform:
 xz:
 - '5'
 zlib:
-- '1.2'
+- '1'
 zstd:
 - '1.5'
