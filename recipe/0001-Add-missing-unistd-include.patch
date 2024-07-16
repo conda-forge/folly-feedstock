@@ -1,24 +1,25 @@
-From 71534db11a5cf19569e2ae771f5e35b038cfd441 Mon Sep 17 00:00:00 2001
-From: Uwe Korn <uwelk@xhochy.com>
-Date: Mon, 26 Feb 2024 10:37:44 +0000
+From d90db93272346560e2ed54d536a2207686ee78a7 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Tue, 16 Jul 2024 14:16:44 +0200
 Subject: [PATCH] Add missing unistd include
 
+Co-authored-by: Uwe Korn <uwelk@xhochy.com>
 ---
- folly/experimental/symbolizer/Elf.cpp | 1 +
+ folly/debugging/symbolizer/Elf.h | 1 +
  1 file changed, 1 insertion(+)
 
-diff --git a/folly/experimental/symbolizer/Elf.cpp b/folly/experimental/symbolizer/Elf.cpp
-index 6a7f74f..cb854be 100644
---- a/folly/experimental/symbolizer/Elf.cpp
-+++ b/folly/experimental/symbolizer/Elf.cpp
-@@ -30,6 +30,7 @@
- #include <folly/lang/CString.h>
+diff --git a/folly/debugging/symbolizer/Elf.h b/folly/debugging/symbolizer/Elf.h
+index c89ac23b8..858f31f33 100644
+--- a/folly/debugging/symbolizer/Elf.h
++++ b/folly/debugging/symbolizer/Elf.h
+@@ -32,6 +32,7 @@
+ #include <folly/Range.h>
+ #include <folly/lang/SafeAssert.h>
  #include <folly/portability/Config.h>
- #include <folly/portability/SysMman.h>
 +#include <folly/portability/Unistd.h>
- 
+
  #if FOLLY_HAVE_ELF
- 
--- 
-2.25.1
+
+--
+2.44.0
 
