@@ -1,0 +1,62 @@
+From e3dc03f5621935bf9caabadb9f46712f561747e9 Mon Sep 17 00:00:00 2001
+From: Yedidya Feldblum <yfeldblum@meta.com>
+Date: Tue, 25 Jun 2024 08:26:58 -0700
+Subject: [PATCH] cut outdated apple version checks
+
+Summary:
+Fixes: https://github.com/facebook/folly/issues/2076.
+
+The checks in `folly/Memory.h` are from 2016 ({D3081743}).
+The checks in `folly/system/ThreadName.cpp` are from 2018 ({D7648204}) and earlier.
+
+Re versions, macOS 10.6 is from 2009 and iOS 3 is from 2010. We no longer support that far back, let alone earlier.
+
+Differential Revision: D58926470
+
+fbshipit-source-id: 0230cefd8fbdd97e7cc911af181ef9637dc1e72b
+---
+ folly/Memory.h              |  5 +----
+ folly/system/ThreadName.cpp | 10 ----------
+ 2 files changed, 1 insertion(+), 14 deletions(-)
+
+diff --git a/folly/Memory.h b/folly/Memory.h
+index 412a0050f..91a7533af 100644
+--- a/folly/Memory.h
++++ b/folly/Memory.h
+@@ -45,10 +45,7 @@ namespace folly {
+ #if (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE >= 200112L) || \
+     (defined(_XOPEN_SOURCE) && _XOPEN_SOURCE >= 600) ||         \
+     (defined(__ANDROID__) && (__ANDROID_API__ > 16)) ||         \
+-    (defined(__APPLE__) &&                                      \
+-     (__MAC_OS_X_VERSION_MIN_REQUIRED >= __MAC_10_6 ||          \
+-      __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_3_0)) ||     \
+-    defined(__FreeBSD__) || defined(__wasm32__)
++    (defined(__APPLE__)) || defined(__FreeBSD__) || defined(__wasm32__)
+ 
+ inline void* aligned_malloc(size_t size, size_t align) {
+   // use posix_memalign, but mimic the behaviour of memalign
+diff --git a/folly/system/ThreadName.cpp b/folly/system/ThreadName.cpp
+index 0701d99f1..52c4ddd64 100644
+--- a/folly/system/ThreadName.cpp
++++ b/folly/system/ThreadName.cpp
+@@ -53,17 +53,7 @@
+ #endif
+ 
+ #if defined(__APPLE__)
+-#if defined(__MAC_OS_X_VERSION_MIN_REQUIRED) && \
+-    __MAC_OS_X_VERSION_MIN_REQUIRED >= 1060
+-// macOS 10.6+ has pthread_setname_np(const char*) (1 param)
+ #define FOLLY_HAS_PTHREAD_SETNAME_NP_NAME 1
+-#elif defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && \
+-    __IPHONE_OS_VERSION_MIN_REQUIRED >= 30200
+-// iOS 3.2+ has pthread_setname_np(const char*) (1 param)
+-#define FOLLY_HAS_PTHREAD_SETNAME_NP_NAME 1
+-#else
+-#define FOLLY_HAS_PTHREAD_SETNAME_NP_NAME 0
+-#endif
+ #else
+ #define FOLLY_HAS_PTHREAD_SETNAME_NP_NAME 0
+ #endif // defined(__APPLE__)
+-- 
+2.45.2
+
