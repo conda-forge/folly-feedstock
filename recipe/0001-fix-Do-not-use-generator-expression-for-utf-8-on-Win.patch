@@ -1,0 +1,36 @@
+From c700a30ae6367cb4a934385d7e9bf062bd140ed9 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Mon, 12 Aug 2024 14:52:38 +0200
+Subject: [PATCH] fix: Do not use generator expression for "/utf-8" on Windows
+
+See: https://github.com/facebook/folly/issues/2250
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ CMake/GenPkgConfig.cmake | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/CMake/GenPkgConfig.cmake b/CMake/GenPkgConfig.cmake
+index 0e93175bd..c854acb02 100644
+--- a/CMake/GenPkgConfig.cmake
++++ b/CMake/GenPkgConfig.cmake
+@@ -105,6 +105,16 @@ function(gen_pkgconfig_vars)
+     )
+   endif()
+ 
++  # On Windows replace "$<$<COMPILE_LANGUAGE:CXX>:/utf-8>" with "/utf-8"
++  # See: https://github.com/facebook/folly/issues/1433
++  if(WIN32)
++    string(REPLACE
++      "$<$<COMPILE_LANGUAGE:CXX>:/utf-8>" ""
++      cflags "${cflags}"
++    )
++    set(cflags "${cflags} /utf-8")
++  endif()
++
+   set("${var_prefix}_CFLAGS" "${cflags}" PARENT_SCOPE)
+   set("${var_prefix}_PRIVATE_LIBS" "${private_libs}" PARENT_SCOPE)
+ endfunction()
+-- 
+2.45.2
+
