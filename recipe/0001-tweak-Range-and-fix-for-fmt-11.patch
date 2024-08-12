@@ -1,0 +1,166 @@
+From 21e8dcd464ee46b2144a1e4d4c0e452355ae15f0 Mon Sep 17 00:00:00 2001
+From: Yedidya Feldblum <yfeldblum@meta.com>
+Date: Tue, 30 Jul 2024 16:37:08 -0700
+Subject: [PATCH] tweak Range and fix for fmt-11
+
+Summary:
+`folly::Range` roughly models both a range and a span. This mostly works out okay. But there are edge cases where it does not, such as when the `*obj.begin()` returns a reference-proxy value-type rather than a reference. In these cases, while we can get `reference` from the iterator type via `iterator_traits`, we cannot get `value_type` or `const_reference` from `reference` directly.
+
+* Get `value_type` also from the iterator type via `iterator_traits`.
+* When `reference` is a reference-proxy value-type, let `const_reference` be an alias to `reference`. In such cases, `const_reference` and `reference` will be the same and there will be no protection against non-`const` access via a `const`-qualified `Range` receiver. As trivial, the other case when `const_reference` and `reference` are identical would be when `std::is_const_v<std::remove_reference_t<reference>>`.
+
+Fixes a regression with fmt-11, which is stricter on the requirements for member `value_type` and requires it to be a value type, and with which folly fails to build.
+
+See the pull request https://github.com/fmtlib/fmt/pull/4086 for additional context.
+
+Closes: https://github.com/fmtlib/fmt/pull/4086.
+
+Reviewed By: luciang, vitaut
+
+Differential Revision: D60342412
+
+fbshipit-source-id: 030ad9d720c8870049ed432e8523da67b8555b90
+---
+ folly/Range.h            | 49 ++++++++++++++++++++++------------------
+ folly/test/RangeTest.cpp |  2 ++
+ 2 files changed, 29 insertions(+), 22 deletions(-)
+
+diff --git a/folly/Range.h b/folly/Range.h
+index 1e826c37740..8f2077e0081 100644
+--- a/folly/Range.h
++++ b/folly/Range.h
+@@ -240,17 +240,27 @@ using range_traits_t_ = typename range_traits_c_<Iter>::template apply<Value>;
+ template <class Iter>
+ class Range {
+  private:
++  using iter_traits = std::iterator_traits<Iter>;
++
+   template <typename Alloc>
+   using string = std::basic_string<char, std::char_traits<char>, Alloc>;
+ 
+  public:
++  using value_type = typename iter_traits::value_type;
+   using size_type = std::size_t;
++  using difference_type = typename iter_traits::difference_type;
+   using iterator = Iter;
+   using const_iterator = Iter;
+-  using value_type = typename std::remove_reference<
+-      typename std::iterator_traits<Iter>::reference>::type;
+-  using difference_type = typename std::iterator_traits<Iter>::difference_type;
+-  using reference = typename std::iterator_traits<Iter>::reference;
++  using reference = typename iter_traits::reference;
++  using const_reference = conditional_t<
++      std::is_lvalue_reference_v<reference>,
++      std::add_lvalue_reference_t<
++          std::add_const_t<std::remove_reference_t<reference>>>,
++      conditional_t<
++          std::is_rvalue_reference_v<reference>,
++          std::add_rvalue_reference_t<
++              std::add_const_t<std::remove_reference_t<reference>>>,
++          reference>>;
+ 
+   /*
+    * For MutableStringPiece and MutableByteRange we define StringPiece
+@@ -264,9 +274,7 @@ class Range {
+       Range<const value_type*>,
+       Range<Iter>>::type;
+ 
+-  using traits_type = detail::range_traits_t_< //
+-      Iter,
+-      typename std::remove_const<value_type>::type>;
++  using traits_type = detail::range_traits_t_<Iter, value_type>;
+ 
+   static const size_type npos;
+ 
+@@ -592,19 +600,19 @@ class Range {
+   constexpr Iter end() const { return e_; }
+   constexpr Iter cbegin() const { return b_; }
+   constexpr Iter cend() const { return e_; }
+-  value_type& front() {
++  reference front() {
+     assert(b_ < e_);
+     return *b_;
+   }
+-  value_type& back() {
++  reference back() {
+     assert(b_ < e_);
+     return *std::prev(e_);
+   }
+-  const value_type& front() const {
++  const_reference front() const {
+     assert(b_ < e_);
+     return *b_;
+   }
+-  const value_type& back() const {
++  const_reference back() const {
+     assert(b_ < e_);
+     return *std::prev(e_);
+   }
+@@ -628,10 +636,10 @@ class Range {
+   // std::string_view (when it is available).
+   struct NotStringView {};
+   template <typename ValueType>
+-  struct StringViewType
++  struct StringViewType //
+       : std::conditional<
+-            std::is_trivial<std::remove_const_t<ValueType>>::value,
+-            std::basic_string_view<std::remove_const_t<ValueType>>,
++            std::is_trivial<ValueType>::value,
++            std::basic_string_view<ValueType>,
+             NotStringView> {};
+ 
+   template <typename Target>
+@@ -745,24 +753,24 @@ class Range {
+     return r;
+   }
+ 
+-  value_type& operator[](size_t i) {
++  reference operator[](size_t i) {
+     assert(i < size());
+     return b_[i];
+   }
+ 
+-  const value_type& operator[](size_t i) const {
++  const_reference operator[](size_t i) const {
+     assert(i < size());
+     return b_[i];
+   }
+ 
+-  value_type& at(size_t i) {
++  reference at(size_t i) {
+     if (i >= size()) {
+       throw_exception<std::out_of_range>("index out of range");
+     }
+     return b_[i];
+   }
+ 
+-  const value_type& at(size_t i) const {
++  const_reference at(size_t i) const {
+     if (i >= size()) {
+       throw_exception<std::out_of_range>("index out of range");
+     }
+@@ -1167,10 +1175,7 @@ class Range {
+ 
+     b_ = result.end() == e_
+         ? e_
+-        : std::next(
+-              result.end(),
+-              typename std::iterator_traits<Iter>::difference_type(
+-                  delimiter.size()));
++        : std::next(result.end(), difference_type(delimiter.size()));
+ 
+     return result;
+   }
+diff --git a/folly/test/RangeTest.cpp b/folly/test/RangeTest.cpp
+index 3d91dbc2d7d..35a3b09122a 100644
+--- a/folly/test/RangeTest.cpp
++++ b/folly/test/RangeTest.cpp
+@@ -49,6 +49,8 @@ using namespace std;
+ static_assert(folly::detail::range_is_char_type_v_<char*>, "");
+ static_assert(folly::detail::range_is_byte_type_v_<unsigned char*>, "");
+ 
++static_assert(std::is_same_v<char, typename Range<char*>::value_type>);
++
+ BOOST_CONCEPT_ASSERT((boost::RandomAccessRangeConcept<StringPiece>));
+ 
+ TEST(StringPiece, All) {

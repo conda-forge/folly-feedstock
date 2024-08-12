@@ -12,6 +12,9 @@ source:
   patches:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
     - 0001-Add-missing-unistd-include.patch
+    # Patch of https://github.com/facebook/folly/commit/21e8dcd464ee46b2144a1e4d4c0e452355ae15f0
+    # TODO: removed it in 2024.08.05.00
+    - 0001-tweak-Range-and-fix-for-fmt-11.patch
 
 build:
   number: 1
