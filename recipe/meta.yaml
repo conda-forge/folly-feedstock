@@ -14,11 +14,13 @@ source:
     - 0001-Add-missing-unistd-include.patch
     # backport https://github.com/facebook/folly/commit/e3dc03f5621935bf9caabadb9f46712f561747e9
     - 0001-cut-outdated-apple-version-checks.patch
+    # Patch of https://github.com/facebook/folly/commit/21e8dcd464ee46b2144a1e4d4c0e452355ae15f0
+    - 0001-tweak-Range-and-fix-for-fmt-11.patch
 
 build:
   # We do not need builds on Windows so we skip them.
   skip: true  # [win]
-  number: 6
+  number: 7
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
