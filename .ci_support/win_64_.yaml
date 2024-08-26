@@ -18,6 +18,8 @@ glog:
 - '0.7'
 libboost_devel:
 - '1.86'
+libboost_headers:
+- '1.86'
 libevent:
 - 2.1.12
 lz4_c:

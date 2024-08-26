@@ -17,7 +17,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '12'
+- '13'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fmt:
@@ -29,6 +29,8 @@ gflags:
 glog:
 - '0.7'
 libboost_devel:
+- '1.86'
+libboost_headers:
 - '1.86'
 libevent:
 - 2.1.12
