@@ -15,7 +15,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '17'
 fmt:
 - '11'
 folly_build_ext:
@@ -25,6 +25,8 @@ gflags:
 glog:
 - '0.7'
 libboost_devel:
+- '1.84'
+libboost_headers:
 - '1.84'
 libevent:
 - 2.1.12
