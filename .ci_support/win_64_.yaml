@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2019
 fmt:
-- '10'
+- '11'
 folly_build_ext:
 - None
 gflags:
@@ -17,6 +17,8 @@ gflags:
 glog:
 - '0.7'
 libboost_devel:
+- '1.86'
+libboost_headers:
 - '1.86'
 libevent:
 - 2.1.12
