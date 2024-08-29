@@ -35,6 +35,7 @@ requirements:
     - libboost-devel
     - double-conversion
     - fmt {{ fmt }}
+    - fast_float
     - gflags
     - glog
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
