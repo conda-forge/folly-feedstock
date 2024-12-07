@@ -5,7 +5,7 @@ c_stdlib:
 c_stdlib_version:
 - '2.17'
 cdt_name:
-- cos7
+- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -13,9 +13,9 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '12'
+- '13'
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- quay.io/condaforge/linux-anvil-x86_64:alma9
 fmt:
 - '11'
 folly_build_ext:
@@ -26,10 +26,12 @@ glog:
 - '0.7'
 libboost_devel:
 - '1.86'
+libboost_headers:
+- '1.86'
 libevent:
 - 2.1.12
 lz4_c:
-- 1.9.3
+- '1.10'
 openssl:
 - '3'
 snappy:
@@ -38,9 +40,6 @@ target_platform:
 - linux-64
 xz:
 - '5'
-zip_keys:
-- - c_stdlib_version
-  - cdt_name
 zlib:
 - '1'
 zstd:
