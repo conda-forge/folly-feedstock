@@ -1,4 +1,4 @@
-{% set version = "2024.12.02.00" %}
+{% set version = "2024.12.09.00" %}
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 {% set build_ext = "_jemalloc" if jemalloc_enabled else ""  %}
 
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
-  sha256: 8cce5b638aad2f7284e1db2ddf39123f4df8d81f9e3efc516200aab6e89f2206
+  sha256: 96ee5e63512c94de2d85958ae50d6b35f0781e4ec608d43f1e06380452bbcea3
   patches:
     - 0001-Use-CMAKE_SYSTEM_PROCESSOR-instead-of-CMAKE_LIBRARY_.patch
     - 0002-Add-missing-unistd-include.patch
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
