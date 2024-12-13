@@ -30,6 +30,8 @@ libboost_headers:
 - '1.86'
 libevent:
 - 2.1.10
+liblzma_devel:
+- '5'
 lz4_c:
 - '1.10'
 openssl:
@@ -38,8 +40,6 @@ snappy:
 - '1.2'
 target_platform:
 - linux-aarch64
-xz:
-- '5'
 zlib:
 - '1'
 zstd:
