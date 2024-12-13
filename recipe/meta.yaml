@@ -20,7 +20,7 @@ source:
 build:
   # We do not need builds on Windows so we skip them.
   skip: true  # [win]
-  number: 9
+  number: 10
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
@@ -51,7 +51,7 @@ requirements:
     - bzip2
     - lz4-c
     - openssl
-    - xz
+    - liblzma-devel
     - zlib
     - zstd
   run:
