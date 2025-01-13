@@ -1,0 +1,51 @@
+From 1f71f2e450cb7841160fa9e3b97717f502cf1d21 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Mon, 13 Jan 2025 15:40:18 +0100
+Subject: [PATCH] Remove package-config file generation
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ CMakeLists.txt | 20 --------------------
+ 1 file changed, 20 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c348f5ef0..79495248f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -495,14 +495,6 @@ install(
+   COMPONENT dev
+ )
+ 
+-# Generate a pkg-config file so that downstream projects that don't use
+-# CMake can depend on folly using pkg-config.
+-configure_file(
+-  ${CMAKE_CURRENT_SOURCE_DIR}/CMake/libfolly.pc.in
+-  ${CMAKE_CURRENT_BINARY_DIR}/libfolly.pc.gen
+-  @ONLY
+-)
+-
+ # Specify target to allow resolving generator expressions requiring
+ # a target for CMake >=3.19. See #1414.
+ # VERSION_GREATER_EQUAL isn't available before CMake 3.7.
+@@ -510,18 +502,6 @@ if(NOT CMAKE_VERSION VERSION_LESS 3.19)
+   set(target_arg TARGET folly_deps)
+ endif()
+ 
+-file(
+-  GENERATE
+-  OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/libfolly.pc
+-  INPUT ${CMAKE_CURRENT_BINARY_DIR}/libfolly.pc.gen
+-  ${target_arg}
+-)
+-install(
+-  FILES ${CMAKE_CURRENT_BINARY_DIR}/libfolly.pc
+-  DESTINATION ${LIB_INSTALL_DIR}/pkgconfig
+-  COMPONENT dev
+-)
+-
+ option(BUILD_TESTS "If enabled, compile the tests." OFF)
+ option(BUILD_BENCHMARKS "If enabled, compile the benchmarks." OFF)
+ option(BUILD_BROKEN_TESTS "If enabled, compile tests that are known to be broken." OFF)
+-- 
+2.47.1
+

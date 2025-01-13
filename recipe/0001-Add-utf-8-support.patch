@@ -1,0 +1,25 @@
+From e701b2739e6d33dd25629731408de3a6b183be9d Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Mon, 13 Jan 2025 15:53:21 +0100
+Subject: [PATCH] Add utf-8 support
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ CMake/FollyCompilerMSVC.cmake | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/CMake/FollyCompilerMSVC.cmake b/CMake/FollyCompilerMSVC.cmake
+index ad03039aa..6bdb49f61 100644
+--- a/CMake/FollyCompilerMSVC.cmake
++++ b/CMake/FollyCompilerMSVC.cmake
+@@ -122,6 +122,7 @@ function(apply_folly_compile_options_to_target THETARGET)
+       /std:${MSVC_LANGUAGE_VERSION} # Build in the requested version of C++
+ 
+     PRIVATE
++      /utf-8  # Unicode support (Resolve error C2338)
+       /bigobj # Support objects with > 65k sections. Needed due to templates.
+       /favor:${MSVC_FAVORED_ARCHITECTURE} # Architecture to prefer when generating code.
+       /Zc:inline # Have the compiler eliminate unreferenced COMDAT functions and data before emitting the object file.
+-- 
+2.47.1
+
