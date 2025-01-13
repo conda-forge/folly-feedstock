@@ -17,6 +17,7 @@ source:
     # Patch of https://github.com/facebook/folly/commit/21e8dcd464ee46b2144a1e4d4c0e452355ae15f0
     - 0001-tweak-Range-and-fix-for-fmt-11.patch
     - 0001-Remove-package-config-file-generation.patch  # [win]
+    - 0001-Add-utf-8-support.patch  # [win]
 
 build:
   number: 11
