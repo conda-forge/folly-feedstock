@@ -318,6 +318,34 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_folly_build_extjemalloclibboost_devel1.86libevent2.1.12" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>win_64_libboost_devel1.84.0libevent2.1.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_libboost_devel1.84.0libevent2.1.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_libboost_devel1.84.0libevent2.1.12</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_libboost_devel1.84.0libevent2.1.12" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_libboost_devel1.86libevent2.1.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_libboost_devel1.86libevent2.1.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_libboost_devel1.86libevent2.1.12</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=win&configuration=win%20win_64_libboost_devel1.86libevent2.1.12" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
