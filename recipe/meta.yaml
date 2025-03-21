@@ -18,9 +18,10 @@ source:
     - 0001-tweak-Range-and-fix-for-fmt-11.patch
     - 0001-Remove-package-config-file-generation.patch  # [win]
     - 0001-Add-utf-8-support.patch  # [win]
+    - 0001-Suffix-source-token-with-__.patch  # [win]
 
 build:
-  number: 11
+  number: 12
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
