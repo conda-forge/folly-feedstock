@@ -1,4 +1,4 @@
-From e85a6ebe0e477b3db66a4d7f80f25a7dbea38b4c Mon Sep 17 00:00:00 2001
+From 52741e54c9a9a6cf626c3ad86fe28f8bb3edcee1 Mon Sep 17 00:00:00 2001
 From: Julien Jerphanion <git@jjerphan.xyz>
 Date: Fri, 21 Mar 2025 12:23:37 +0100
 Subject: [PATCH] Suffix `source` token with `__`
@@ -14,11 +14,11 @@ error C2065: 'source': undeclared identifier
 
 Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
 ---
- folly/gen/Base-inl.h | 302 +++++++++++++++++++++----------------------
- 1 file changed, 151 insertions(+), 151 deletions(-)
+ folly/gen/Base-inl.h | 322 +++++++++++++++++++++----------------------
+ 1 file changed, 161 insertions(+), 161 deletions(-)
 
 diff --git a/folly/gen/Base-inl.h b/folly/gen/Base-inl.h
-index bbad83fee..56d00cc6c 100644
+index bbad83fee..1a6484b03 100644
 --- a/folly/gen/Base-inl.h
 +++ b/folly/gen/Base-inl.h
 @@ -202,8 +202,8 @@ class CopiedSource
@@ -653,7 +653,7 @@ index bbad83fee..56d00cc6c 100644
    }
  
    /**
-@@ -1990,7 +1990,7 @@ class FoldLeft : public Operator<FoldLeft<Seed, Fold>> {
+@@ -1990,10 +1990,10 @@ class FoldLeft : public Operator<FoldLeft<Seed, Fold>> {
        : seed_(std::move(seed)), fold_(std::move(fold)) {}
  
    template <class Source, class Value>
@@ -661,16 +661,23 @@ index bbad83fee..56d00cc6c 100644
 +  Seed compose(const GenImpl<Value, Source>& source__) const {
      static_assert(!Source::infinite, "Cannot foldl infinite source");
      Seed accum = seed_;
-     source | [&](Value v) {
-@@ -2015,7 +2015,7 @@ class First : public Operator<First> {
+-    source | [&](Value v) {
++    source__ | [&](Value v) {
+       accum = fold_(std::move(accum), std::forward<Value>(v));
+     };
+     return accum;
+@@ -2015,9 +2015,9 @@ class First : public Operator<First> {
        class Source,
        class Value,
        class StorageType = typename std::decay<Value>::type>
 -  Optional<StorageType> compose(const GenImpl<Value, Source>& source) const {
 +  Optional<StorageType> compose(const GenImpl<Value, Source>& source__) const {
      Optional<StorageType> accum;
-     source | [&](Value v) -> bool {
+-    source | [&](Value v) -> bool {
++    source__ | [&](Value v) -> bool {
        accum = std::forward<Value>(v);
+       return false;
+     };
 @@ -2029,7 +2029,7 @@ class First : public Operator<First> {
   * IsEmpty - a helper class for isEmpty and notEmpty
   *
@@ -689,7 +696,16 @@ index bbad83fee..56d00cc6c 100644
      static_assert(
          !Source::infinite,
          "Cannot call 'all', 'any', 'isEmpty', or 'notEmpty' on "
-@@ -2086,7 +2086,7 @@ class Reduce : public Operator<Reduce<Reducer>> {
+@@ -2054,7 +2054,7 @@ class IsEmpty : public Operator<IsEmpty<emptyResult>> {
+         "false or hang. 'any' or 'notEmpty' will either return true "
+         "or hang.");
+     bool ans = emptyResult;
+-    source | [&](Value /* v */) -> bool {
++    source__ | [&](Value /* v */) -> bool {
+       ans = !emptyResult;
+       return false;
+     };
+@@ -2086,10 +2086,10 @@ class Reduce : public Operator<Reduce<Reducer>> {
        class Source,
        class Value,
        class StorageType = typename std::decay<Value>::type>
@@ -697,7 +713,11 @@ index bbad83fee..56d00cc6c 100644
 +  Optional<StorageType> compose(const GenImpl<Value, Source>& source__) const {
      static_assert(!Source::infinite, "Cannot reduce infinite source");
      Optional<StorageType> accum;
-     source | [&](Value v) {
+-    source | [&](Value v) {
++    source__ | [&](Value v) {
+       if (auto target = accum.get_pointer()) {
+         *target = reducer_(std::move(*target), std::forward<Value>(v));
+       } else {
 @@ -2112,11 +2112,11 @@ class Count : public Operator<Count> {
    Count() = default;
  
@@ -729,7 +749,7 @@ index bbad83fee..56d00cc6c 100644
    }
  };
  
-@@ -2165,7 +2165,7 @@ class Contains : public Operator<Contains<Needle>> {
+@@ -2165,12 +2165,12 @@ class Contains : public Operator<Contains<Needle>> {
        class Source,
        class Value,
        class StorageType = typename std::decay<Value>::type>
@@ -738,7 +758,13 @@ index bbad83fee..56d00cc6c 100644
      static_assert(
          !Source::infinite,
          "Calling contains on an infinite source might cause "
-@@ -2211,7 +2211,7 @@ class Min : public Operator<Min<Selector, Comparer>> {
+         "an infinite loop.");
+-    return !(source | [this](Value value) {
++    return !(source__ | [this](Value value) {
+       return !(needle_ == std::forward<Value>(value));
+     });
+   }
+@@ -2211,14 +2211,14 @@ class Min : public Operator<Min<Selector, Comparer>> {
        class Source,
        class StorageType = typename std::decay<Value>::type,
        class Key = typename std::decay<invoke_result_t<Selector, Value>>::type>
@@ -747,16 +773,28 @@ index bbad83fee..56d00cc6c 100644
      static_assert(
          !Source::infinite,
          "Calling min or max on an infinite source will cause "
-@@ -2250,7 +2250,7 @@ class Append : public Operator<Append<Collection>> {
+         "an infinite loop.");
+     Optional<StorageType> min;
+     Optional<Key> minKey;
+-    source | [&](Value v) {
++    source__ | [&](Value v) {
+       Key key = selector_(asConst(v)); // so that selector_ cannot mutate v
+       if (auto lastKey = minKey.get_pointer()) {
+         if (!comparer_(key, *lastKey)) {
+@@ -2250,9 +2250,9 @@ class Append : public Operator<Append<Collection>> {
    explicit Append(Collection* collection) : collection_(collection) {}
  
    template <class Value, class Source>
 -  Collection& compose(const GenImpl<Value, Source>& source) const {
+-    static_assert(!Source::infinite, "Cannot appendTo with infinite source");
+-    source | [&](Value v) {
 +  Collection& compose(const GenImpl<Value, Source>& source__) const {
-     static_assert(!Source::infinite, "Cannot appendTo with infinite source");
-     source | [&](Value v) {
++    static_assert(!Source::infinite, "Cannot appendTo with infinite source__");
++    source__ | [&](Value v) {
        collection_->insert(collection_->end(), std::forward<Value>(v));
-@@ -2278,7 +2278,7 @@ class Collect : public Operator<Collect<Collection>> {
+     };
+     return *collection_;
+@@ -2278,11 +2278,11 @@ class Collect : public Operator<Collect<Collection>> {
        class Value,
        class Source,
        class StorageType = typename std::decay<Value>::type>
@@ -765,7 +803,12 @@ index bbad83fee..56d00cc6c 100644
      static_assert(
          !Source::infinite, "Cannot convert infinite source to object with as.");
      Collection collection;
-@@ -2318,7 +2318,7 @@ class CollectTemplate : public Operator<CollectTemplate<Container, Allocator>> {
+-    source | [&](Value v) {
++    source__ | [&](Value v) {
+       collection.insert(collection.end(), std::forward<Value>(v));
+     };
+     return collection;
+@@ -2318,11 +2318,11 @@ class CollectTemplate : public Operator<CollectTemplate<Container, Allocator>> {
        class Source,
        class StorageType = typename std::decay<Value>::type,
        class Collection = Container<StorageType, Allocator<StorageType>>>
@@ -774,6 +817,11 @@ index bbad83fee..56d00cc6c 100644
      static_assert(
          !Source::infinite, "Cannot convert infinite source to object with as.");
      Collection collection;
+-    source | [&](Value v) {
++    source__ | [&](Value v) {
+       collection.insert(collection.end(), std::forward<Value>(v));
+     };
+     return collection;
 @@ -2459,8 +2459,8 @@ class ToVirtualGen : public Operator<ToVirtualGen> {
    template <
        class Source,
