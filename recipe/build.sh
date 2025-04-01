@@ -55,7 +55,7 @@ if [[ "${target_platform}" == "linux-ppc64le" ]]; then
     CMAKE_ARGS="${CMAKE_ARGS} -DHAVE_VSNPRINTF_ERRORS_EXITCODE=0 -DHAVE_VSNPRINTF_ERRORS_EXITCODE__TRYRUN_OUTPUT=''"
 fi
 
-cmake ${CMAKE_ARGS} -Wno-dev -GNinja -DBUILD_SHARED_LIBS=ON ..
+cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ${CMAKE_ARGS} -Wno-dev -GNinja -DBUILD_SHARED_LIBS=ON ..
 
 cat CMakeCache.txt
 
