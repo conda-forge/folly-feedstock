@@ -1,6 +1,7 @@
 set
 
 cmake -GNinja ^
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ^
       -DBoost_NO_BOOST_CMAKE=ON ^
       -DBUILD_SHARED_LIBS=OFF ^
       -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
