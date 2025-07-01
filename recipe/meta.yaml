@@ -35,7 +35,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - cmake
+    - cmake <4
     - ninja
   host:
     - libboost-devel
