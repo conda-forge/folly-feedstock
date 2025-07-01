@@ -19,13 +19,13 @@ cxx_compiler_version:
 fmt:
 - '11.1'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
 - '0.7'
 libboost_devel:
-- '1.86'
+- 1.82.0
 libboost_headers:
 - '1.86'
 libevent:
@@ -35,13 +35,13 @@ liblzma_devel:
 lz4_c:
 - '1.10'
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 openssl:
 - '3'
 snappy:
 - '1.2'
 target_platform:
-- osx-64
+- osx-arm64
 zlib:
 - '1'
 zstd:

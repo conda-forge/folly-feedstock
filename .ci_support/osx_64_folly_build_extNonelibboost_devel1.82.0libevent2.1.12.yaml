@@ -25,23 +25,23 @@ gflags:
 glog:
 - '0.7'
 libboost_devel:
-- '1.86'
+- 1.82.0
 libboost_headers:
 - '1.86'
 libevent:
-- 2.1.10
+- 2.1.12
 liblzma_devel:
 - '5'
 lz4_c:
 - '1.10'
 macos_machine:
-- arm64-apple-darwin20.0.0
+- x86_64-apple-darwin13.4.0
 openssl:
 - '3'
 snappy:
 - '1.2'
 target_platform:
-- osx-arm64
+- osx-64
 zlib:
 - '1'
 zstd:
