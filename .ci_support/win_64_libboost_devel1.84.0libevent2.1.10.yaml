@@ -7,9 +7,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- vs2022
 fmt:
-- '11'
+- '11.2'
 folly_build_ext:
 - None
 gflags:
