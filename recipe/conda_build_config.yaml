@@ -5,9 +5,5 @@ c_stdlib_version:          # [osx and x86_64]
 folly_build_ext:
   - None
   - "jemalloc"  # [not win]
-libboost_devel:
-  - "1.82.0"
-  - "1.84.0"
-libevent:
-  - "2.1.10"
-  - "2.1.12"
+cxx_compiler:              # [win]
+  - vs2019                 # [win]
