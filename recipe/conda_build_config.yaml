@@ -5,3 +5,5 @@ c_stdlib_version:          # [osx and x86_64]
 folly_build_ext:
   - None
   - "jemalloc"  # [not win]
+cxx_compiler:              # [win]
+  - vs2019                 # [win]
