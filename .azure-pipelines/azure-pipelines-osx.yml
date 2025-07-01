@@ -8,53 +8,29 @@ jobs:
     vmImage: macOS-13
   strategy:
     matrix:
-      osx_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.10:
-        CONFIG: osx_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.10
+      osx_64_folly_build_extNonelibboost_devel1.82.0:
+        CONFIG: osx_64_folly_build_extNonelibboost_devel1.82.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12:
-        CONFIG: osx_64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12
+      osx_64_folly_build_extNonelibboost_devel1.84.0:
+        CONFIG: osx_64_folly_build_extNonelibboost_devel1.84.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extNonelibboost_devel1.86libevent2.1.10:
-        CONFIG: osx_64_folly_build_extNonelibboost_devel1.86libevent2.1.10
+      osx_64_folly_build_extjemalloclibboost_devel1.82.0:
+        CONFIG: osx_64_folly_build_extjemalloclibboost_devel1.82.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extNonelibboost_devel1.86libevent2.1.12:
-        CONFIG: osx_64_folly_build_extNonelibboost_devel1.86libevent2.1.12
+      osx_64_folly_build_extjemalloclibboost_devel1.84.0:
+        CONFIG: osx_64_folly_build_extjemalloclibboost_devel1.84.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.10:
-        CONFIG: osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.10
+      osx_arm64_folly_build_extNonelibboost_devel1.82.0:
+        CONFIG: osx_arm64_folly_build_extNonelibboost_devel1.82.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12:
-        CONFIG: osx_64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12
+      osx_arm64_folly_build_extNonelibboost_devel1.84.0:
+        CONFIG: osx_arm64_folly_build_extNonelibboost_devel1.84.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extjemalloclibboost_devel1.86libevent2.1.10:
-        CONFIG: osx_64_folly_build_extjemalloclibboost_devel1.86libevent2.1.10
+      osx_arm64_folly_build_extjemalloclibboost_devel1.82.0:
+        CONFIG: osx_arm64_folly_build_extjemalloclibboost_devel1.82.0
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extjemalloclibboost_devel1.86libevent2.1.12:
-        CONFIG: osx_64_folly_build_extjemalloclibboost_devel1.86libevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent2.1.10:
-        CONFIG: osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12:
-        CONFIG: osx_arm64_folly_build_extNonelibboost_devel1.84.0libevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extNonelibboost_devel1.86libevent2.1.10:
-        CONFIG: osx_arm64_folly_build_extNonelibboost_devel1.86libevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extNonelibboost_devel1.86libevent2.1.12:
-        CONFIG: osx_arm64_folly_build_extNonelibboost_devel1.86libevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.10:
-        CONFIG: osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12:
-        CONFIG: osx_arm64_folly_build_extjemalloclibboost_devel1.84.0libevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extjemalloclibboost_devel1.86libevent2.1.10:
-        CONFIG: osx_arm64_folly_build_extjemalloclibboost_devel1.86libevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_folly_build_extjemalloclibboost_devel1.86libevent2.1.12:
-        CONFIG: osx_arm64_folly_build_extjemalloclibboost_devel1.86libevent2.1.12
+      osx_arm64_folly_build_extjemalloclibboost_devel1.84.0:
+        CONFIG: osx_arm64_folly_build_extjemalloclibboost_devel1.84.0
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}

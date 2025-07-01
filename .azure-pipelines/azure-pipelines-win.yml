@@ -8,17 +8,11 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_libboost_devel1.84.0libevent2.1.10:
-        CONFIG: win_64_libboost_devel1.84.0libevent2.1.10
+      win_64_libboost_devel1.82.0:
+        CONFIG: win_64_libboost_devel1.82.0
         UPLOAD_PACKAGES: 'True'
-      win_64_libboost_devel1.84.0libevent2.1.12:
-        CONFIG: win_64_libboost_devel1.84.0libevent2.1.12
-        UPLOAD_PACKAGES: 'True'
-      win_64_libboost_devel1.86libevent2.1.10:
-        CONFIG: win_64_libboost_devel1.86libevent2.1.10
-        UPLOAD_PACKAGES: 'True'
-      win_64_libboost_devel1.86libevent2.1.12:
-        CONFIG: win_64_libboost_devel1.86libevent2.1.12
+      win_64_libboost_devel1.84.0:
+        CONFIG: win_64_libboost_devel1.84.0
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:

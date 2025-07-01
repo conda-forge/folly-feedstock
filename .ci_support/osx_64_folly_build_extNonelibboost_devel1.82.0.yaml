@@ -19,13 +19,13 @@ cxx_compiler_version:
 fmt:
 - '11'
 folly_build_ext:
-- jemalloc
+- None
 gflags:
 - '2.2'
 glog:
 - '0.7'
 libboost_devel:
-- '1.86'
+- 1.82.0
 libboost_headers:
 - '1.86'
 libevent:
