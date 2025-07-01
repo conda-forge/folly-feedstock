@@ -19,13 +19,13 @@ docker_image:
 fmt:
 - '11'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
 - '0.7'
 libboost_devel:
-- 1.84.0
+- '1.86'
 libboost_headers:
 - '1.86'
 libevent:
@@ -39,7 +39,7 @@ openssl:
 snappy:
 - '1.2'
 target_platform:
-- linux-ppc64le
+- linux-64
 zlib:
 - '1'
 zstd:
