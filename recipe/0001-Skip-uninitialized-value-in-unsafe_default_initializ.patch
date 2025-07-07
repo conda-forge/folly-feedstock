@@ -1,0 +1,32 @@
+From e29c7eb073a6c2f6c75e482a151821dcb9bacaf9 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Mon, 7 Jul 2025 16:02:28 +0200
+Subject: [PATCH] Skip uninitialized value in `unsafe_default_initialized_cv`
+ with GCC
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ folly/Utility.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/folly/Utility.h b/folly/Utility.h
+index 59cb6b6db..5707a2515 100644
+--- a/folly/Utility.h
++++ b/folly/Utility.h
+@@ -486,11 +486,13 @@ struct unsafe_default_initialized_cv {
+   FOLLY_ERASE constexpr /* implicit */ operator T() const noexcept {
+ #if defined(__cpp_lib_is_constant_evaluated)
+ #if __cpp_lib_is_constant_evaluated >= 201811L
++#if !defined(__GNUC__)
+     if (!std::is_constant_evaluated()) {
+       T uninit;
+       return uninit;
+     }
+ #endif
++#endif
+ #endif
+     return T();
+   }
+--
+2.50.0
+
