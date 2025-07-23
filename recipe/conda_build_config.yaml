@@ -7,3 +7,7 @@ folly_build_ext:
   - "jemalloc"  # [not win]
 cxx_compiler:              # [win]
   - vs2019                 # [win]
+cxx_compiler_version:      # [osx]
+  - "18"                   # [osx]
+c_compiler_version:        # [osx]
+  - "18"                   # [osx]
