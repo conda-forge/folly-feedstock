@@ -14,8 +14,7 @@ source:
     - 0002-Add-missing-unistd-include.patch
 
 build:
-  skip: true  # [win]
-  number: 1
+  number: 2
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext == "jemalloc")]
