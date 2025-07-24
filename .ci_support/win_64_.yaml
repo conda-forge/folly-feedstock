@@ -9,7 +9,7 @@ channel_targets:
 cxx_compiler:
 - vs2022
 fmt:
-- '11.1'
+- '11.2'
 folly_build_ext:
 - None
 gflags:
