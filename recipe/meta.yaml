@@ -14,7 +14,9 @@ source:
     - 0002-Add-missing-unistd-include.patch
 
 build:
-  skip: true  # [win]
+  # Skip build for the creation of the 2025.04.14.00 branch
+  skip: true
+  # skip: true  # [win]
   number: 0
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
