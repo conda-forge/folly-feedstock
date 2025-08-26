@@ -17,8 +17,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: {{ build }}        # [not (unix and x86_64)]
-  number: {{ build }}        # [unix and x86_64 and microarch_level == 1]
+  number: {{ build }}        # [not (unix and x86_64 and microarch_level == 2)]
   number: {{ build + 100 }}  # [unix and x86_64 and microarch_level == 2]
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}                                # [not (unix and x86_64)]
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}_x86_64_v{{ microarch_level }}  # [unix and x86_64]
