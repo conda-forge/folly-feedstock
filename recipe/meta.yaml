@@ -20,7 +20,8 @@ build:
   number: {{ build }}        # [not (unix and x86_64)]
   number: {{ build }}        # [unix and x86_64 and microarch_level == 1]
   number: {{ build + 100 }}  # [unix and x86_64 and microarch_level == 2]
-  string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
+  string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}                                # [not (unix and x86_64)]
+  string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}_x86_64_v{{ microarch_level }}  # [unix and x86_64]
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
     - jemalloc-local  # [osx and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
@@ -28,6 +29,7 @@ build:
     # Since folly is ABI-unstable, the exact same version must be used at compile time and runtime.
     # See: https://github.com/facebook/folly/#build-notes
     - {{ pin_subpackage('folly', max_pin='x.x.x.x') }}
+    - folly * *_x86_64_v{{ microarch_level }}  # [unix and x86_64]
 
 requirements:
   build:
