@@ -1,0 +1,25 @@
+From 7c0e8d20fb6fe948e2a78dcd0072820017b8b901 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Tue, 26 Aug 2025 08:50:39 +0200
+Subject: [PATCH] Include missing `<stdexcept>` header
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ folly/hash/Checksum.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/folly/hash/Checksum.cpp b/folly/hash/Checksum.cpp
+index 1d42d6a6e..5fd62497b 100644
+--- a/folly/hash/Checksum.cpp
++++ b/folly/hash/Checksum.cpp
+@@ -15,6 +15,7 @@
+  */
+ 
+ #include <folly/hash/Checksum.h>
++#include <stdexcept>
+ 
+ #include <algorithm>
+ 
+-- 
+2.50.1
+
