@@ -8,12 +8,20 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_folly_build_extNone:
-        CONFIG: linux_64_folly_build_extNone
+      linux_64_folly_build_extNonemicroarch_level1:
+        CONFIG: linux_64_folly_build_extNonemicroarch_level1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_folly_build_extjemalloc:
-        CONFIG: linux_64_folly_build_extjemalloc
+      linux_64_folly_build_extNonemicroarch_level2:
+        CONFIG: linux_64_folly_build_extNonemicroarch_level2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_folly_build_extjemallocmicroarch_level1:
+        CONFIG: linux_64_folly_build_extjemallocmicroarch_level1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_folly_build_extjemallocmicroarch_level2:
+        CONFIG: linux_64_folly_build_extjemallocmicroarch_level2
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
       linux_aarch64_folly_build_extNone:

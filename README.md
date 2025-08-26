@@ -39,17 +39,31 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_folly_build_extNone</td>
+              <td>linux_64_folly_build_extNonemicroarch_level1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNone" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonemicroarch_level1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_folly_build_extjemalloc</td>
+              <td>linux_64_folly_build_extNonemicroarch_level2</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemalloc" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extNonemicroarch_level2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_folly_build_extjemallocmicroarch_level1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemallocmicroarch_level1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_folly_build_extjemallocmicroarch_level2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_folly_build_extjemallocmicroarch_level2" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -81,17 +95,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extNone</td>
+              <td>osx_64_folly_build_extNonemicroarch_level1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNone" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonemicroarch_level1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_folly_build_extjemalloc</td>
+              <td>osx_64_folly_build_extNonemicroarch_level2</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemalloc" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extNonemicroarch_level2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_folly_build_extjemallocmicroarch_level1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemallocmicroarch_level1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_folly_build_extjemallocmicroarch_level2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13658&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/folly-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_folly_build_extjemallocmicroarch_level2" alt="variant">
                 </a>
               </td>
             </tr><tr>
