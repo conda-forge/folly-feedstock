@@ -1,25 +1,25 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '11.0'
-MACOSX_SDK_VERSION:
-- '11.0'
 bzip2:
 - '1'
 c_stdlib:
-- macosx_deployment_target
+- sysroot
 c_stdlib_version:
-- '11.0'
+- '2.17'
+cdt_name:
+- conda
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '19'
+- '14'
+docker_image:
+- quay.io/condaforge/linux-anvil-x86_64:alma9
 fmt:
 - '11.2'
 folly_build_ext:
-- None
+- jemalloc
 gflags:
 - '2.2'
 glog:
@@ -34,8 +34,6 @@ liblzma_devel:
 - '5'
 lz4_c:
 - '1.10'
-macos_machine:
-- arm64-apple-darwin20.0.0
 microarch_level:
 - '1'
 openssl:
@@ -43,7 +41,7 @@ openssl:
 snappy:
 - '1.2'
 target_platform:
-- osx-arm64
+- linux-64
 zlib:
 - '1'
 zstd:

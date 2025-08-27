@@ -8,11 +8,17 @@ jobs:
     vmImage: macOS-13
   strategy:
     matrix:
-      osx_64_folly_build_extNone:
-        CONFIG: osx_64_folly_build_extNone
+      osx_64_folly_build_extNonemicroarch_level1:
+        CONFIG: osx_64_folly_build_extNonemicroarch_level1
         UPLOAD_PACKAGES: 'True'
-      osx_64_folly_build_extjemalloc:
-        CONFIG: osx_64_folly_build_extjemalloc
+      osx_64_folly_build_extNonemicroarch_level2:
+        CONFIG: osx_64_folly_build_extNonemicroarch_level2
+        UPLOAD_PACKAGES: 'True'
+      osx_64_folly_build_extjemallocmicroarch_level1:
+        CONFIG: osx_64_folly_build_extjemallocmicroarch_level1
+        UPLOAD_PACKAGES: 'True'
+      osx_64_folly_build_extjemallocmicroarch_level2:
+        CONFIG: osx_64_folly_build_extjemallocmicroarch_level2
         UPLOAD_PACKAGES: 'True'
       osx_arm64_folly_build_extNone:
         CONFIG: osx_arm64_folly_build_extNone
