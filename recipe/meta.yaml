@@ -15,7 +15,7 @@ source:
     - 0001-Add-c-20-as-an-option-for-MSVC_LANGUAGE_VERSION.patch  # [win]
 
 build:
-  number: 5
+  number: 6
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext == "jemalloc")]
