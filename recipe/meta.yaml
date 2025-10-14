@@ -22,7 +22,7 @@ source:
     - 0001-Skip-uninitialized-value-in-unsafe_default_initializ.patch
 
 build:
-  number: 18
+  number: 19
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
