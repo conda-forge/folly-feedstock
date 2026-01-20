@@ -1,0 +1,33 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Conda Forge <conda-forge@users.noreply.github.com>
+Date: Mon, 20 Jan 2026 00:00:00 +0000
+Subject: [PATCH] Exclude aarch64-use variants from monolithic library
+
+The memcpy_aarch64-use and memset_aarch64-use libraries cause duplicate
+symbol definitions when linked into the monolithic library because they
+compile the same source files as memcpy_aarch64 and memset_aarch64.
+
+---
+ folly/external/aor/CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/folly/external/aor/CMakeLists.txt b/folly/external/aor/CMakeLists.txt
+index 1234567..abcdefg 100644
+--- a/folly/external/aor/CMakeLists.txt
++++ b/folly/external/aor/CMakeLists.txt
+@@ -35,6 +35,7 @@ endif()
+ 
+ folly_add_library(
+   NAME memcpy_aarch64-use
++  EXCLUDE_FROM_MONOLITH
+   SRCS
+     memcpy-advsimd.S
+     memcpy-armv8.S
+@@ -58,6 +59,7 @@ endif()
+ 
+ folly_add_library(
+   NAME memset_aarch64-use
++  EXCLUDE_FROM_MONOLITH
+   SRCS
+     memset-advsimd.S
+     memset-mops.S

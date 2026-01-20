@@ -11,6 +11,7 @@ source:
   sha256: fb15833b6cee0d5c4437b18bccfda2d75056380f479746010fd58176dff911f9
   patches:
     - 0001-Add-missing-unistd-include.patch
+    - 0002-Exclude-aarch64-use-variants-from-monolithic-library.patch
     - Include-missing-stdexcept-header.patch
 
 build:
