@@ -1,4 +1,4 @@
-{% set version = "2026.01.19.00" %}
+{% set version = "2026.02.16.00" %}
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 {% set build_ext = "_jemalloc" if jemalloc_enabled else ""  %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
-  sha256: fb15833b6cee0d5c4437b18bccfda2d75056380f479746010fd58176dff911f9
+  sha256: d08766427a2a41ca8463613d86060f49958f63c1e950b831b9286fe366bee99e
   patches:
     - 0001-Add-missing-unistd-include.patch
     - 0002-Exclude-aarch64-use-variants-from-monolithic-library.patch
