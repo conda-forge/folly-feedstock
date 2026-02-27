@@ -16,7 +16,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
