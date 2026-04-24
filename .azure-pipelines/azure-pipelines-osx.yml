@@ -12,18 +12,22 @@ jobs:
         CONFIG: osx_64_folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        store_build_artifacts: false
       osx_64_folly_build_extjemalloc:
         CONFIG: osx_64_folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        store_build_artifacts: false
       osx_arm64_folly_build_extNone:
         CONFIG: osx_arm64_folly_build_extNone
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        store_build_artifacts: false
       osx_arm64_folly_build_extjemalloc:
         CONFIG: osx_arm64_folly_build_extjemalloc
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
+        store_build_artifacts: false
   timeoutInMinutes: 360
   variables: {}
 
