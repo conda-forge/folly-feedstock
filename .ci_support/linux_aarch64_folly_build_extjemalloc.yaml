@@ -31,7 +31,7 @@ libevent:
 liblzma_devel:
 - '5'
 libsodium:
-- 1.0.21
+- 1.0.22
 lz4_c:
 - '1.10'
 openssl:
