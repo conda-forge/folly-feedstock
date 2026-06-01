@@ -1,4 +1,4 @@
-{% set version = "2026.01.19.00" %}
+{% set version = "2026.05.25.00" %}
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 {% set build_ext = "_jemalloc" if jemalloc_enabled else ""  %}
 
@@ -8,15 +8,14 @@ package:
 
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
-  sha256: fb15833b6cee0d5c4437b18bccfda2d75056380f479746010fd58176dff911f9
+  sha256: 8773183092b151227046cd221e882adfb09008b3280bc31615a3e2d5ab25dbdc
   patches:
-    - 0001-Add-missing-unistd-include.patch
-    - 0002-Exclude-aarch64-use-variants-from-monolithic-library.patch
-    - Include-missing-stdexcept-header.patch
+    - 0001-Fix-building-shared-libraries-on-aarch64.patch
+
 
 build:
   skip: true  # [win]
-  number: 3
+  number: 0
   string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}{{ build_ext }}
   ignore_run_exports:
     - jemalloc        # [(not osx) and (folly_build_ext is not undefined and folly_build_ext == "jemalloc")]
@@ -72,7 +71,7 @@ test:
 
     - test -f ${PREFIX}/lib/libfolly${SHLIB_EXT}              # [unix]
     - test -f ${PREFIX}/include/folly/folly-config.h          # [unix]
-    - $CXX $CXXFLAGS $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test  # [unix]
+    - $CXX $CXXFLAGS -std=c++20 $LDFLAGS $RECIPE_DIR/arena_test.c -lfolly -o arena_test  # [unix]
     - test -f ./arena_test  # [unix]
     - ./arena_test  # [unix]
 
