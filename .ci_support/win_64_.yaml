@@ -13,7 +13,7 @@ fmt:
 folly_build_ext:
 - None
 gflags:
-- '2.2'
+- '2.3'
 glog:
 - '0.7'
 libboost_devel:
