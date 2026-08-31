@@ -1,4 +1,4 @@
-{% set version = "2026.08.10.00" %}
+{% set version = "2026.08.31.00" %}
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 {% set build_ext = "_jemalloc" if jemalloc_enabled else ""  %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
-  sha256: add1cde8feb39f2f3777bf222f64e6ebf6d8107806e6b665afa3772a7acf8b74
+  sha256: f9fc4e2c73d4ec178dce969f6c493790b29f44d915c54586fa642f26358e823f
   patches:
     - 0001-Fix-building-shared-libraries-on-aarch64.patch
 
