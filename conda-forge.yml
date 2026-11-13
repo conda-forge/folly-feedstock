@@ -2,8 +2,6 @@ bot:
   abi_migration_branches:
   - 2025.04.14.00
   automerge: true
-build_platform:
-  linux_ppc64le: linux_64
 conda_build:
   pkg_format: '2'
 conda_forge_output_validation: true
