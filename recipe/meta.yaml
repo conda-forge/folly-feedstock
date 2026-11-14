@@ -9,8 +9,6 @@ package:
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
   sha256: b47fe04b804adfb51c65cda6b171505e67b9d1d69621106e54697821d1bf7ebc
-  patches:
-    - 0001-Fix-building-shared-libraries-on-aarch64.patch
 
 
 build:
