@@ -29,7 +29,7 @@ libboost_devel:
 libboost_headers:
 - '1.90'
 libevent:
-- 2.1.12
+- 2.1.13
 liblzma_devel:
 - '5'
 libsodium:
