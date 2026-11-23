@@ -1,4 +1,4 @@
-{% set version = "2026.10.26.00" %}
+{% set version = "2026.11.23.00" %}
 {% set jemalloc_enabled = folly_build_ext is not undefined and folly_build_ext == "jemalloc" %}
 {% set build_ext = "_jemalloc" if jemalloc_enabled else ""  %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/facebook/folly/archive/v{{ version }}.tar.gz
-  sha256: b47fe04b804adfb51c65cda6b171505e67b9d1d69621106e54697821d1bf7ebc
+  sha256: 44946e05dbeb6cf1d74ff590c76586e87de54fdf7e045388341b5755af8edb0b
 
 
 build:
