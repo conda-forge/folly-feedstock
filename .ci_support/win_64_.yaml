@@ -7,7 +7,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 fmt:
 - '12.1'
 folly_build_ext:
@@ -37,4 +39,4 @@ target_platform:
 zlib:
 - '1'
 zstd:
-- '1.5'
+- '1.6'
